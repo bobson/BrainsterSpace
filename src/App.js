@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+import "./App.css";
+
+import Homepage from "./pages/Homepage";
+import Header from "./components/Header";
+import Calendar from "./pages/Calendar";
+import EventsSpace from "./pages/EventsSpace";
+import Academies from "./pages/Academies";
+import Coworking from "./components/Coworking";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="container">
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route path="/coworking" component={Coworking} />
+          <Route path="/calendar" component={Calendar} />
+          <Route path="/academies" component={Academies} />
+          <Route path="/events_space" component={EventsSpace} />
+        </Switch>
+      </div>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
