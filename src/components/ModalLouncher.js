@@ -13,7 +13,6 @@ const ModalLouncher = (props) => {
   const { className } = props;
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => console.log(data);
-  console.log(errors);
 
   const toggle = () => setModal(!modal);
 
@@ -45,7 +44,11 @@ const ModalLouncher = (props) => {
                     name="name"
                     id="name"
                     placeholder="Внесете Име и Презиме"
-                    ref={register({ required: true, maxLength: 80 })}
+                    ref={register({
+                      required: true,
+                      minLength: 2,
+                      maxLength: 80,
+                    })}
                   />
                 </div>
                 <div className="col-12">
@@ -79,7 +82,7 @@ const ModalLouncher = (props) => {
                     ref={register({
                       required: true,
                       minLength: 6,
-                      maxLength: 12,
+                      maxLength: 16,
                     })}
                   />
                 </div>
@@ -95,9 +98,8 @@ const ModalLouncher = (props) => {
                     id="sorabotka"
                     rows="5"
                     placeholder="Во 300 карактери, опишете зошто сакате да соработуваме"
-                    ref={register({ maxLength: 80 })}
+                    ref={register({ maxLength: 300 })}
                   />
-                  {/* <input type="submit" /> */}
                 </div>
               </div>
             </ModalBody>
@@ -105,11 +107,7 @@ const ModalLouncher = (props) => {
               <Button className="text-small" color="none" onClick={toggle}>
                 ИСКЛУЧИ
               </Button>
-              <button
-                type="submit"
-                className="btn-custom float-right"
-                color="danger"
-              >
+              <button type="submit" className="btn-custom float-right">
                 ИСПРАТИ ФОРМА
               </button>{" "}
             </ModalFooter>

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import image from "../assets/Sliki/Za_Nas/coworking.jpg";
 
 const Coworking = () => {
+  const [popOpen, setPopOpen] = useState(false);
+
+  const toggle = () => setPopOpen(!popOpen);
   return (
     <div
       className="row mt-5 pt-4 align-items-center flex-lg-row-reverse"

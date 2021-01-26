@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Karticka = ({ img, title, text, url }) => {
   return (
-    <div className="col-sm-12 col-md-6 col-lg-4 mb-3 p-2 Karticka">
+    <div className="col-sm-12 col-md-6 col-lg-4 pt-3 pb-3">
       <Card>
         <div className="inner">
           <CardImg top width="100%" src={img} alt="Card image cap" />

@@ -16,8 +16,25 @@ const Footer = () => {
             <h6 className="font-weight-bold">Корисни Линкови</h6>
             <ul className="list-unstyled">
               <li>Конаткт</li>
-              <li>Отворени позиции</li>
-              <li>Галерија</li>
+              <li>
+                <a
+                  href="https://wearelaika.com"
+                  target="blank"
+                  className="text-dark"
+                >
+                  Отворени позиции
+                </a>
+              </li>
+              <li>
+                {" "}
+                <a
+                  href="https://medium.com/wearelaika/brainster-space-the-"
+                  target="blank"
+                  className="text-dark"
+                >
+                  Галерија
+                </a>
+              </li>
               <li>
                 <Link className="text-dark" to="/calendar">
                   Календар
@@ -45,14 +62,15 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="col-sm-6 order-1 order-md-3 col-md-4 col-lg-4 ml-md-auto d-flex">
+          <div className="col-sm-6 order-1 order-md-3 col-md-4 col-lg-6 ml-md-auto d-flex">
             <Link to="." className="ml-md-auto pb-5">
               <img
                 src={logo}
                 alt="logo"
                 // className="img-fluid"
                 // height="80%"
-                width="80px"
+                // width="80px"
+                className="img-fluid"
               />
             </Link>
           </div>

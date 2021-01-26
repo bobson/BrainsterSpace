@@ -1,26 +1,6 @@
 import React from "react";
 
-import img1 from "../assets/Sliki/Renderi/2.jpg";
-import img2 from "../assets/Sliki/Renderi/C1 1.jpg";
-import img3 from "../assets/Sliki/Renderi/C1 4.jpg";
-import img4 from "../assets/Sliki/Renderi/C2 1.jpg";
-import img5 from "../assets/Sliki/Renderi/C3 1.jpg";
-import img6 from "../assets/Sliki/Renderi/C3 2.jpg";
-import img7 from "../assets/Sliki/Renderi/C3 EXIBITION_1.jpg";
-import img8 from "../assets/Sliki/Renderi/HOL KON SEDENJE.jpg";
-import img9 from "../assets/Sliki/KITCHEN_03.jpg";
-
-const cards = [
-  { img: img1, text: "Brainster" },
-  { img: img2, text: "Училница" },
-  { img: img3, text: "Канцелариски простор" },
-  { img: img4, text: "Училница" },
-  { img: img5, text: "Адаптибилна училница" },
-  { img: img6, text: "Сала со бина" },
-  { img: img7, text: "Конференциска сала" },
-  { img: img8, text: "Хол" },
-  { img: img9, text: "Space Kitchen" },
-];
+import { events_cards } from "../lib/cards";
 
 const Prostorii = () => {
   return (
@@ -37,7 +17,7 @@ const Prostorii = () => {
       </div>
       <div className="col-md-12 col-lg">
         <div className="row">
-          {cards.map((card, i) => (
+          {events_cards.map((card, i) => (
             <div key={i} className="col-md-6 col-lg-4 img-events-space">
               <img src={card.img} alt="block-img" />
               <p className="mt-1">{card.text}</p>

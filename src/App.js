@@ -8,14 +8,14 @@ import Header from "./components/Header";
 import Calendar from "./pages/Calendar";
 import EventsSpace from "./pages/EventsSpace";
 import Academies from "./pages/Academies";
-import Coworking from "./components/Coworking";
 import Footer from "./components/Footer";
+import Coworking from "./components/Coworking";
 
 function App() {
   return (
     <BrowserRouter>
+      <Header />
       <div className="container">
-        <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/coworking" component={Coworking} />
@@ -24,6 +24,7 @@ function App() {
           <Route path="/events_space" component={EventsSpace} />
         </Switch>
       </div>
+
       <Footer />
     </BrowserRouter>
   );

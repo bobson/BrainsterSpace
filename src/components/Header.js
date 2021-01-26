@@ -3,12 +3,12 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
-  Button,
 } from "reactstrap";
+
+import { AiOutlinePlus } from "react-icons/ai";
 
 import logo from "../assets/brainster_space_logo.svg";
 import ModalLouncher from "./ModalLouncher";
@@ -23,9 +23,9 @@ const Header = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <>
-      <Navbar color="white" light expand="lg">
-        <Link to="/">
+    <Navbar color="white" light expand="lg">
+      <div className="container">
+        <Link to="/" className="navbar-brand">
           <img src={logo} alt="logo" />
         </Link>
 
@@ -33,33 +33,39 @@ const Header = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar>
             <NavItem>
-              <Link className="nav-link" to="/calendar">
+              <Link to="/calendar" className="nav-link">
                 НАСТАНИ
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/coworking" className="nav-link">
+              <NavLink to="/coworking" tag={Link}>
                 CO-WORKING
-              </Link>{" "}
+              </NavLink>{" "}
             </NavItem>
             <NavItem>
-              <Link className="nav-link" to="/academies">
+              <NavLink to="/academies" tag={Link}>
                 АКАДЕМИИ
-              </Link>
+              </NavLink>
             </NavItem>
             <NavItem>
-              <Link className="nav-link" to="/events_space">
+              <NavLink to="/events_space" tag={Link}>
                 ПРОСТОР ЗА НАСТАНИ
-              </Link>
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink>ПАРТНЕРСТВА</NavLink>
+              <a
+                href="https://partners.brainster.co/"
+                className="nav-link"
+                target="blank"
+              >
+                ПАРТНЕРСТВА
+              </a>
             </NavItem>
           </Nav>
           <ModalLouncher />
         </Collapse>
-      </Navbar>
-    </>
+      </div>
+    </Navbar>
   );
 };
 

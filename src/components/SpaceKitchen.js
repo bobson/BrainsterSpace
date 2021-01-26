@@ -18,23 +18,27 @@ const SpaceKitchen = () => {
         </p>
       </div>
       <div className="col-lg">
-        <div className="row  ">
-          <img
-            src={img3}
-            alt="kitchen-img"
-            className="img-fluid h-50 col-md-6"
-          />
-          <img src={img4} alt="kitchen-img" className="img-fluid col-md-6" />
-          <img
-            src={img2}
-            alt="kitchen-img"
-            className="img-fluid h-50 col-md-6 col-lg-3 "
-          />
-          <img
-            src={img1}
-            alt="kitchen-img"
-            className="img-fluid h-50 col-md-6 col-lg-3"
-          />
+        <div className="row flex-lg-row ">
+          <div className="col-md-6 blog-img">
+            <div className="row">
+              <img src={img3} alt="kitchen-img" className="col-lg-12" />
+            </div>
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="row flex-row">
+                  <div className="col-lg-6">
+                    <img src={img2} alt="kitchen-img" />
+                  </div>
+                  <div className="col-lg-12">
+                    <img src={img1} alt="kitchen-img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-md blog-img">
+            <img src={img4} alt="kitchen-img" className="" />
+          </div>
         </div>
       </div>
     </div>
