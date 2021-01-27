@@ -1,5 +1,4 @@
 import React from "react";
-import Block from "../components/Block";
 import Offers from "../components/Offers";
 import Prostorii from "../components/Prostorii";
 import SpaceKitchen from "../components/SpaceKitchen";
@@ -8,15 +7,13 @@ import eventHostImg from "../assets/Sliki/Space_Blog_Kartici/Untitled-design-5-1
 
 import { blockContext } from "../lib/cards";
 
-const handleClick = () => {
-  <a href="#event-host"></a>;
-};
-
 const ProstorZaNastani = () => {
   return (
     <div className="row mt-5 pt-4">
       <div className={`col-md-12 col-lg-4`}>
-        <h3 className="font-weight-bold display-4">Простор за настани</h3>
+        <h3 className="block-title" style={{ width: "100%" }}>
+          Простор за настани
+        </h3>
         {blockContext.events_space_2}
         <a href="#event-host">
           <button className="btn-custom mb-4 mr-2 pl-4 pr-4">БУКИРАЈ НЕ</button>
@@ -44,7 +41,7 @@ const EventsSpace = () => {
           <img src={eventHostImg} alt="host-img" className="event-host-img" />
         </div>
         <div className="col-md-6 col-lg-4">
-          <h3 className="font-weight-bold">Event Host</h3>
+          <h3 className="block-title">Event Host</h3>
           <p>Ања Макеска</p>
           <p>anja@brainster.co</p>
           <p>+389 (0)70 233414</p>

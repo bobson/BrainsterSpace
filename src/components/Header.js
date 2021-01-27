@@ -8,7 +8,7 @@ import {
   NavLink,
 } from "reactstrap";
 
-import { AiOutlinePlus } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 
 import logo from "../assets/brainster_space_logo.svg";
 import ModalLouncher from "./ModalLouncher";
@@ -17,21 +17,28 @@ import { Link } from "react-router-dom";
 
 // import { NavLink } from "react-router-dom";
 
+import "./header.css";
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar color="white" light expand="lg">
-      <div className="container">
-        <Link to="/" className="navbar-brand">
+    <Navbar color="white" expand="lg" className="p-0  p-lg-3">
+      <div className="container-lg">
+        <Link to="/" className="navbar-brand p-3  p-lg-0">
           <img src={logo} alt="logo" />
         </Link>
+        <div className="d-none d-md-block d-lg-none ml-auto">
+          <ModalLouncher />
+        </div>
+        <NavbarToggler onClick={toggle} className="mr-3 ml-2">
+          <AiOutlineMenu />
+        </NavbarToggler>
 
-        <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav navbar>
+          <Nav navbar className="text-center custom-color ">
             <NavItem>
               <Link to="/calendar" className="nav-link">
                 НАСТАНИ
@@ -61,8 +68,10 @@ const Header = () => {
                 ПАРТНЕРСТВА
               </a>
             </NavItem>
+            <div className="d-md-none d-lg-block ml-auto btn-responsive">
+              <ModalLouncher />
+            </div>
           </Nav>
-          <ModalLouncher />
         </Collapse>
       </div>
     </Navbar>

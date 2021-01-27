@@ -12,9 +12,7 @@ import { Link } from "react-router-dom";
 const ZaNas = () => {
   return (
     <div className="row mt-5 4" id="za-nas">
-      <h2 className="col-12 mb-3 text-center display-4 font-weight-bold">
-        За Нас
-      </h2>
+      <h3 className="col-12 mb-3 text-center block-title">За Нас</h3>
       {za_nas_cards.map((item) => (
         <Karticka
           key={item.title}
@@ -29,6 +27,7 @@ const ZaNas = () => {
 };
 
 const Edukacija = () => {
+  const [title, setTitle] = useState("Едукација");
   const [text, setText] = useState(blockContext.edukacija);
   const [img, setImg] = useState(blockContext.edukacija_img);
   const [style1, setStyle1] = useState({
@@ -41,12 +40,14 @@ const Edukacija = () => {
   });
 
   const handleAkademii = () => {
+    setTitle("Едукација");
     setText(blockContext.edukacija);
     setImg(blockContext.edukacija_img);
     setStyle1({ background: "black", color: "#fcd232" });
     setStyle2({ background: "#fcd232", color: "black" });
   };
   const handleKompanii = () => {
+    setTitle("Компании");
     setText(blockContext.kompanii);
     setImg(blockContext.kompanii_img);
     setStyle1({ background: "#fcd232", color: "black" });
@@ -56,7 +57,7 @@ const Edukacija = () => {
   return (
     <div className="row mt-5 pt-4" id="partnership">
       <div className={`col-md-12 col-lg-5`}>
-        <h3 className="font-weight-bold display-4">Едукација</h3>
+        <h3 className="block-title">{title}</h3>
         {text}
         <button
           onClick={handleAkademii}
@@ -83,9 +84,7 @@ const Edukacija = () => {
 const Nastani = () => {
   return (
     <div className="row mt-5 pt-4 " id="nastani">
-      <h2 className="col-12 mb-3 text-center display-4 font-weight-bold">
-        Настани
-      </h2>
+      <h2 className="col-12 mb-3 text-center block-title">Настани</h2>
       {nastani_cards.map((item) => (
         <Karticka
           key={item.title}
@@ -105,7 +104,7 @@ const ProstorZaNastani = () => {
   return (
     <div className="row mt-5 pt-4">
       <div className={`col-md-12 col-lg-5`}>
-        <h3 className="font-weight-bold display-4">Простор за настани</h3>
+        <h3 className="block-title">Простор за настани</h3>
         {blockContext.events_space_1}
         <Link to="/events_space">
           <button className="btn-custom mb-4 mr-2 pl-4 pr-4">
@@ -124,10 +123,11 @@ const Homepage = () => {
   return (
     <>
       <div className="title mb-5">
-        <h1 className="text-center display-4">
+        <h1 className="text-center block-title">
           Центар за Учење, Кариера и Иновација
         </h1>
       </div>
+
       <ZaNas />
       <Edukacija />
       <Nastani />

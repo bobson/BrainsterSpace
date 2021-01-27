@@ -1,0 +1,51 @@
+.modal-body {
+  padding: 0 !important;
+}
+
+.close span {
+  border-radius: 100%;
+  background-color: black;
+  color: white;
+  opacity: 1;
+  padding: 3px 8px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.modal-body .col-12 {
+  padding: 0 5px;
+}
+
+label {
+  margin-bottom: 0 !important;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 0 !important;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 0 !important;
+}
+.modal-title {
+  font-weight: bold;
+  /* font-size: 30px; */
+}
+.val-mess {
+  /* display: inline-block; */
+  color: red;
+  font-size: 0.7rem;
+  float: right;
+  position: absolute;
+  right: 20px;
+  bottom: 1px;
+}
+.max-text {
+  position: absolute;
+  right: 20px;
+  bottom: 1px;
+  font-size: 0.7rem;
+}

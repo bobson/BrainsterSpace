@@ -106,8 +106,8 @@ const Calendar = () => {
   return (
     <>
       <div className="row mt-5  justyfy-content-between align-items-center">
-        <div className="col-sm-12 col-md-6 mb-0 mb-md-5 calendar-title">
-          <h3>Календар</h3>
+        <div className="col-sm-12 col-md-6 mb-0 mb-md-5">
+          <h3 className="block-title">Календар</h3>
         </div>
         <div className="col-sm-12 col-md-6 mb-5 month">
           <p className="float-md-right">

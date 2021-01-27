@@ -1,6 +1,5 @@
 import React from "react";
 
-import Block from "../components/Block";
 import img from "../assets/Sliki/Nastani/IMG_7481.jpg";
 import { BsPeople } from "react-icons/bs";
 import { RiCalendar2Fill } from "react-icons/ri";
@@ -12,7 +11,7 @@ import marketing from "../assets/Sliki/Za_Nas/edukacija2.jpg";
 import grafickiDizajn from "../assets/Sliki/Za_Nas/edukacija.jpg";
 import frontEnd from "../assets/Sliki/Za_Nas/edukacija1.jpg";
 import fullStack from "../assets/Sliki/Za_Nas/coworking.jpg";
-import softTesting from "../assets/Sliki//Za_Nas/edukacija2.jpg";
+import softTesting from "../assets/Sliki/Za_Nas/edukacija2.jpg";
 
 const cardContext = [
   {
@@ -94,10 +93,9 @@ const AcademyCard = ({ img, title, color, link }) => {
 const Academies = () => {
   return (
     <>
-      <Block
-        col="4"
-        title="Академии"
-        text={
+      <div className="row mt-5 pt-4">
+        <div className={`col-md-12 col-lg-5`}>
+          <h3 className="block-title">Академии</h3>
           <p>
             Нашите академии ќе ти помогнат да ги совладаш најбараните вештини на
             денешницата преку интерактивна настава и практична работа на реални
@@ -110,9 +108,12 @@ const Academies = () => {
             <br />
             Академиите ќе ти го отворат патот кон кариера каква што посакуваш.
           </p>
-        }
-        img={img}
-      />
+        </div>
+        <div className="col-md-12 col-lg blog-img">
+          <img src={img} alt="block-img" />
+        </div>
+      </div>
+
       <div className="row  pt-4">
         {cardContext.map((el) => (
           <AcademyCard

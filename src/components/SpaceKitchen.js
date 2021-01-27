@@ -9,7 +9,7 @@ const SpaceKitchen = () => {
   return (
     <div className="row mt-5 pt-4 align-items-center">
       <div className="col-md-12 col-lg-4">
-        <h3 className="font-weight-bold display-5">Space Kitchen</h3>
+        <h3 className="block-title">Space Kitchen</h3>
         <p>
           Место каде сите настани започнуваат и завршуваат. Место каде нашиот
           тим готви и експериментира. Нашата кујна има само едно правило. <br />
