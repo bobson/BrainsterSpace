@@ -9,7 +9,7 @@ import { blockContext } from "../lib/cards";
 
 const ProstorZaNastani = () => {
   return (
-    <div className="row mt-5 pt-4">
+    <div className="row mt-5 pt-4 align-items-center">
       <div className={`col-md-12 col-lg-4`}>
         <h3 className="block-title" style={{ width: "100%" }}>
           Простор за настани
@@ -41,10 +41,10 @@ const EventsSpace = () => {
           <img src={eventHostImg} alt="host-img" className="event-host-img" />
         </div>
         <div className="col-md-6 col-lg-4">
-          <h3 className="block-title">Event Host</h3>
-          <p>Ања Макеска</p>
-          <p>anja@brainster.co</p>
-          <p>+389 (0)70 233414</p>
+          <h3>Event Host</h3>
+          <p className="p-0">Ања Макеска</p>
+          <p className="p-0">anja@brainster.co</p>
+          <p className="p-0">+389 (0)70 233414</p>
         </div>
       </div>
     </>

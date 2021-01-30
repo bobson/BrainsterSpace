@@ -83,18 +83,21 @@ export const nastani_cards = [
     title: "Codeworks",
     text:
       "Вистинскиот настан за сите tech таленти кои сакаат да кодираат и да научат што е ново во tech заедницата. Настан кој ги поврзува mid programerite со IT компаниите. Deep Dive Intensive Seminar<br/> Екслузивни семинари кои комбинираат три различни техникки на учење.",
+    url: "https://online.brainster.co/webinar_categories/razno/",
   },
   {
     img: marketing,
     title: "Deep Dive into Marketing",
     text:
       "Deep Dive into Marketing се серија интензивни семинари кои се наменски подготвени да ти помогнат да ги совладаш и предвидиш современите промени, предизвици и идните трендови во областа во marketingot.",
+    url: "https://online.brainster.co/webinar_categories/digitalen-marketing/",
   },
   {
     img: dataScience,
     title: "Deep Dive into Data Science",
     text:
       "Deep Dive into Data Science се серија интензивни семинари кои се наменски подготвени да ти помогнат да ги совладаш и предвидиш современите промени, предизвици и идните трендови во областа во Data Science.",
+    url: "https://online.brainster.co/webinar_categories/data-science/",
   },
 ];
 

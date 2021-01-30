@@ -9,6 +9,7 @@ import {
 } from "reactstrap";
 
 import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlinePlus } from "react-icons/ai";
 
 import logo from "../assets/brainster_space_logo.svg";
 import ModalLouncher from "./ModalLouncher";
@@ -21,17 +22,29 @@ import "./header.css";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [modal, setModal] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+  const toggleModal = () => setModal(!modal);
 
   return (
     <Navbar color="white" expand="lg" className="p-0  p-lg-3">
       <div className="container-lg">
-        <Link to="/" className="navbar-brand p-3  p-lg-0">
+        <Link to="/" className="navbar-brand p-4  p-lg-0">
           <img src={logo} alt="logo" />
         </Link>
         <div className="d-none d-md-block d-lg-none ml-auto">
-          <ModalLouncher />
+          <ModalLouncher
+            toggleModal={toggleModal}
+            modal={modal}
+            email="Емаил (задолжително)"
+          >
+            <button className="btn-custom " onClick={() => toggleModal()}>
+              <AiOutlinePlus />
+              ПРИКЛУЧИ СE
+            </button>
+          </ModalLouncher>
+          {/* <MateriaModal /> */}
         </div>
         <NavbarToggler onClick={toggle} className="mr-3 ml-2">
           <AiOutlineMenu />
@@ -69,7 +82,17 @@ const Header = () => {
               </a>
             </NavItem>
             <div className="d-md-none d-lg-block ml-auto btn-responsive">
-              <ModalLouncher />
+              <ModalLouncher
+                toggleModal={toggleModal}
+                modal={modal}
+                email="Емаил (задолжително)"
+              >
+                <button className="btn-custom " onClick={() => toggleModal()}>
+                  <AiOutlinePlus />
+                  ПРИКЛУЧИ СE
+                </button>
+              </ModalLouncher>
+              {/* <MateriaModal /> */}
             </div>
           </Nav>
         </Collapse>

@@ -32,8 +32,8 @@
 .navbar-toggler {
   background-color: black !important;
   color: #fcd232 !important;
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
   padding: 0 !important;
 }
 
@@ -46,11 +46,15 @@
   color: white;
 }
 
+.show .btn-responsive {
+  margin: auto;
+}
+
 .show .btn-responsive button {
   background: #fcd232;
   color: black;
   height: 35px;
 }
-.show div {
-  margin: auto;
+.show {
+  padding-bottom: 0;
 }

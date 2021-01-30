@@ -1,26 +1,22 @@
-.modal-body {
-  padding: 0 !important;
-}
-
 .close span {
   border-radius: 100%;
   background-color: black;
   color: white;
   opacity: 1;
-  padding: 3px 8px;
+  padding: 0 8px 6px 8px;
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .modal-body .col-12 {
-  padding: 0 5px;
+  /* padding: 0 5px; */
 }
 
 label {
   margin-bottom: 0 !important;
   font-weight: bold;
-  font-size: 10px;
-  padding: 0 !important;
+  /* font-size: 13px; */
+  /* padding: 0 !important; */
 }
 
 input,
@@ -28,16 +24,16 @@ textarea {
   width: 100%;
   border-radius: 5px;
   border: 1px solid lightgray;
-  padding: 0 !important;
+  /* padding: 0 !important; */
 }
 .modal-title {
-  font-weight: bold;
-  /* font-size: 30px; */
+  font-size: 30px !important;
 }
+
 .val-mess {
   /* display: inline-block; */
   color: red;
-  font-size: 0.7rem;
+  /* font-size: 0.7rem; */
   float: right;
   position: absolute;
   right: 20px;

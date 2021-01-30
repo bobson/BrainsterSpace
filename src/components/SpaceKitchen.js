@@ -7,7 +7,7 @@ import img4 from "../assets/Sliki/Space_Kitchen_Galerija/IMG_7362.jpg";
 
 const SpaceKitchen = () => {
   return (
-    <div className="row mt-5 pt-4 align-items-center">
+    <div className="row mt-5 pt-4 align-items-center flex-lg-row-reverse">
       <div className="col-md-12 col-lg-4">
         <h3 className="block-title">Space Kitchen</h3>
         <p>
@@ -17,27 +17,25 @@ const SpaceKitchen = () => {
           Вие одберете вид на кетеринг ние ќе го обезбедиме
         </p>
       </div>
-      <div className="col-lg">
-        <div className="row flex-lg-row ">
-          <div className="col-md-6 blog-img">
-            <div className="row">
-              <img src={img3} alt="kitchen-img" className="col-lg-12" />
-            </div>
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="row flex-row">
-                  <div className="col-lg-6">
-                    <img src={img2} alt="kitchen-img" />
-                  </div>
-                  <div className="col-lg-12">
-                    <img src={img1} alt="kitchen-img" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md blog-img">
-            <img src={img4} alt="kitchen-img" className="" />
+      <div className="col-md-12 col-lg-8">
+        <div className="row">
+          <img
+            src={img3}
+            alt=""
+            className="col-md-6 blog-img smaller-kitchen-img pb-2"
+          />
+          <img
+            src={img4}
+            alt=""
+            className="col-md-6 bigger-kitchen-img pt-3 pt-md-0 blog-img"
+          />
+          <div className="row smaller-kitchen-img-1 blog-img ">
+            <img
+              src={img1}
+              alt=""
+              className="col-md-6 col-lg-3 pb-3 mb-1 pb-md-0 mb-md-0 "
+            />
+            <img src={img2} alt="" className="col-md-6 col-lg-3 " />
           </div>
         </div>
       </div>

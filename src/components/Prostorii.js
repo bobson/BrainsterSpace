@@ -20,7 +20,7 @@ const Prostorii = () => {
           {events_cards.map((card, i) => (
             <div key={i} className="col-md-6 col-lg-4 img-events-space">
               <img src={card.img} alt="block-img" />
-              <p className="mt-1">{card.text}</p>
+              <p className="p-0">{card.text}</p>
             </div>
           ))}
         </div>

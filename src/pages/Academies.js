@@ -93,7 +93,7 @@ const AcademyCard = ({ img, title, color, link }) => {
 const Academies = () => {
   return (
     <>
-      <div className="row mt-5 pt-4">
+      <div className="row mt-5 pt-4 align-items-center">
         <div className={`col-md-12 col-lg-5`}>
           <h3 className="block-title">Академии</h3>
           <p>
