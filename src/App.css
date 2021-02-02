@@ -1,6 +1,5 @@
-html,
-body {
-  overflow-x: hidden;
+html {
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -11,10 +10,8 @@ body {
 
 p {
   line-height: normal;
-  font-weight: lighter;
-  font-size: 15px;
-  padding: 10px 0;
-  /* margin: 0 !important; */
+  opacity: 0.9;
+  /* padding: 10px 0; */
 }
 
 h1,
@@ -28,23 +25,49 @@ h5 {
   font-size: 20px !important;
 }
 
+a:hover {
+  text-decoration: none !important;
+}
+
 .line_through {
   text-decoration-line: line-through;
 }
 
 .btn-custom {
-  color: #fcd232;
+  color: #ffc107;
   display: flex;
   align-items: center;
   font-weight: bold;
   background-color: black;
   border: none;
   border-radius: 5px;
-  padding: 0 20px;
+  padding: 0 30px;
   font-size: 12px;
   height: 40px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.3s;
 }
+
+.btn-yellow {
+  background-color: #ffc107;
+  color: black;
+}
+
+/* ova ne treba se resava so pogornata klasa */
+/* .btn-custom-yellow {
+  color: black;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  background-color: #ffc107;
+  border: none;
+  border-radius: 5px;
+  padding: 0 30px;
+  font-size: 12px;
+  height: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 1s;
+} */
 
 .btn-custom svg {
   margin-right: 5px;
@@ -53,8 +76,24 @@ h5 {
 }
 
 .btn-custom:hover {
-  background-color: rgb(56, 58, 56);
+  background-color: #e0a800;
+  /* transform: translateY(-2px); */
+  color: black;
+  transform: scale(1.05);
 }
+
+.btn-custom:disabled:hover {
+  background-color: black;
+  transform: translateY(0px);
+  color: #ffc107;
+}
+
+/* .btn-custom-yellow:hover {
+  background-color: #e0a800;
+}
+.btn-custom-yellow:disabled:hover {
+  background-color: #ffc107;
+} */
 
 .title {
   background-image: url("./assets/Sliki/Nastani/IMG_7481.jpg");
@@ -84,7 +123,7 @@ h5 {
 }
 
 img {
-  object-fit: cover;
+  border-radius: 5px;
 }
 
 .blog-img img {
@@ -118,6 +157,10 @@ img {
   max-width: 100%;
   height: 400px;
   object-fit: cover;
+}
+
+.img-events-space img {
+  height: 180px;
 }
 
 .akademy-card {
@@ -185,8 +228,12 @@ img {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .block-title {
-    font-size: 45px;
-    /* width: 60%; */
+    font-size: 50px;
+  }
+
+  .title h1 {
+    font-size: 50px;
+    width: 60%;
   }
 
   .ideja-text {

@@ -12,7 +12,7 @@ import "./footer.css";
 const Footer = () => {
   const [popup, setPopup] = useState(false);
   return (
-    <footer className="bg-light">
+    <footer className="bg-light mt-5">
       <div className="container">
         <div className="row pt-5 pb-4 flex-nowrap flex-column flex-md-row justify-content-between">
           <div className="col-sm-6 order-2 order-md-1 col-md-4 col-lg-2">

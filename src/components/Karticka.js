@@ -10,12 +10,12 @@ import {
 
 import { Link } from "react-router-dom";
 
-import { FiArrowRightCircle } from "react-icons/fi";
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
 import "./karticka.css";
 import ModalLouncher from "./ModalLouncher";
 
-const Karticka = ({ img, title, text, url }) => {
+const Karticka = ({ img, title, text, url, imgHeight }) => {
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => setModal(!modal);
@@ -28,7 +28,7 @@ const Karticka = ({ img, title, text, url }) => {
   ) {
     link = (
       <Link to={`${url}`} className="stretched-link ml-auto text-dark">
-        <FiArrowRightCircle />
+        <IoArrowForwardCircleOutline />
       </Link>
     );
   } else if (title === "Партнерства со Tech компании") {
@@ -43,9 +43,9 @@ const Karticka = ({ img, title, text, url }) => {
         <Button
           color="none"
           onClick={() => toggleModal()}
-          className="stretched-link ml-auto"
+          className="stretched-link "
         >
-          <FiArrowRightCircle />
+          <IoArrowForwardCircleOutline />
         </Button>
       </ModalLouncher>
     );
@@ -64,30 +64,37 @@ const Karticka = ({ img, title, text, url }) => {
           onClick={() => toggleModal()}
           className="stretched-link ml-auto"
         >
-          <FiArrowRightCircle />
+          <IoArrowForwardCircleOutline />
         </Button>
       </ModalLouncher>
     );
   } else {
     link = (
       <a href={url} target="blank" className="stretched-link ml-auto text-dark">
-        <FiArrowRightCircle />
+        <IoArrowForwardCircleOutline />
       </a>
     );
   }
 
   return (
-    <div className="col-sm-12 col-md-6 col-lg-4 pt-3 pb-3">
+    <div className="col-sm-12 col-md-6 col-lg-4 p-2 d-flex aligin-items-stretch ">
       <Card>
         <div className="inner">
-          <CardImg top width="100%" src={img} alt="Card image cap" />
+          <CardImg
+            top
+            width="100%"
+            height={imgHeight}
+            src={img}
+            alt="Card image cap"
+            className="rounded"
+          />
         </div>
-        <CardBody className="d-flex flex-column">
+        <CardBody className="d-flex flex-column ">
           <CardTitle className="font-weight-bold" tag="h5">
             {title}
           </CardTitle>
           <CardText>{text}</CardText>
-          {link}
+          <div className="card-link ml-auto mt-auto">{link}</div>
         </CardBody>
       </Card>
     </div>

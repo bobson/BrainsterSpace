@@ -5,7 +5,7 @@ import {
   NavbarToggler,
   Nav,
   NavItem,
-  NavLink,
+  // NavLink,
 } from "reactstrap";
 
 import { AiOutlineMenu } from "react-icons/ai";
@@ -16,7 +16,9 @@ import ModalLouncher from "./ModalLouncher";
 
 import { Link } from "react-router-dom";
 
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+// import MaterialModal from "./MaterialModal";
 
 import "./header.css";
 
@@ -44,7 +46,7 @@ const Header = () => {
               ПРИКЛУЧИ СE
             </button>
           </ModalLouncher>
-          {/* <MateriaModal /> */}
+          {/* <MaterialModal /> */}
         </div>
         <NavbarToggler onClick={toggle} className="mr-3 ml-2">
           <AiOutlineMenu />
@@ -53,22 +55,22 @@ const Header = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar className="text-center custom-color ">
             <NavItem>
-              <Link to="/calendar" className="nav-link">
+              <NavLink to="/calendar" className="nav-link ">
                 НАСТАНИ
-              </Link>
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/coworking" tag={Link}>
+              <NavLink to="/coworking" className="nav-link">
                 CO-WORKING
               </NavLink>{" "}
             </NavItem>
             <NavItem>
-              <NavLink to="/academies" tag={Link}>
+              <NavLink to="/academies" className="nav-link">
                 АКАДЕМИИ
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/events_space" tag={Link}>
+              <NavLink to="/events_space" className="nav-link">
                 ПРОСТОР ЗА НАСТАНИ
               </NavLink>
             </NavItem>
@@ -87,12 +89,11 @@ const Header = () => {
                 modal={modal}
                 email="Емаил (задолжително)"
               >
-                <button className="btn-custom " onClick={() => toggleModal()}>
+                <button className="btn-custom" onClick={() => toggleModal()}>
                   <AiOutlinePlus />
                   ПРИКЛУЧИ СE
                 </button>
               </ModalLouncher>
-              {/* <MateriaModal /> */}
             </div>
           </Nav>
         </Collapse>

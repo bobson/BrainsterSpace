@@ -18,8 +18,11 @@ const Prostorii = () => {
       <div className="col-md-12 col-lg">
         <div className="row">
           {events_cards.map((card, i) => (
-            <div key={i} className="col-md-6 col-lg-4 img-events-space">
-              <img src={card.img} alt="block-img" />
+            <div
+              key={i}
+              className="col-md-6 col-lg-4 blog-img img-events-space "
+            >
+              <img src={card.img} alt="event-space-img" />
               <p className="p-0">{card.text}</p>
             </div>
           ))}

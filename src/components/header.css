@@ -24,6 +24,19 @@
   transition: width 0.5s ease, background-color 0.5s ease;
 }
 
+.active:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+  background: #fcd232;
+}
+
+.nav-item a:hover {
+  color: black;
+}
+
 .nav-link:hover:after {
   width: 100%;
   background: #fcd232;
@@ -37,12 +50,11 @@
   padding: 0 !important;
 }
 
-.show ul {
-  background-color: black;
-  padding-bottom: 30px;
+.show a {
+  color: white;
 }
 
-.show a {
+.show .nav-item a:hover {
   color: white;
 }
 
@@ -54,7 +66,9 @@
   background: #fcd232;
   color: black;
   height: 35px;
+  margin-bottom: 20px;
 }
-.show {
-  padding-bottom: 0;
+.show ul {
+  /* padding-bottom: 0; */
+  background-color: black;
 }
