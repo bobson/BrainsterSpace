@@ -67,8 +67,9 @@
   color: black;
   height: 35px;
   margin-bottom: 20px;
+  transition: none;
 }
+
 .show ul {
-  /* padding-bottom: 0; */
   background-color: black;
 }

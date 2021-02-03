@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-import Karticka from "../components/Karticka";
-import Coworking from "../components/Coworking";
+import Karticka from "./Karticka/Karticka";
+import Coworking from "./Coworking/Coworking";
 
-import { blockContext } from "../lib/cards";
-import { za_nas_cards } from "../lib/cards";
-import { nastani_cards } from "../lib/cards";
+import { blockContext } from "../../lib/cards";
+import { za_nas_cards } from "../../lib/cards";
+import { nastani_cards } from "../../lib/cards";
 
 import { FiArrowRight } from "react-icons/fi";
 import { FaRegCalendarAlt } from "react-icons/fa";
@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 const ZaNas = () => {
   return (
     <div className="row mt-5 4" id="za-nas">
-      <h3 className="col-12 mb-3 text-center block-title">За Нас</h3>
+      <p className="col-12 mb-4 text-center block-title">За Нас</p>
       {za_nas_cards.map((item) => (
         <Karticka
           key={item.title}
@@ -30,52 +30,43 @@ const ZaNas = () => {
 };
 
 const Edukacija = () => {
-  const [title, setTitle] = useState("Едукација");
-  const [text, setText] = useState(blockContext.edukacija);
-  const [img, setImg] = useState(blockContext.edukacija_img);
-  const [toggleClass, setToggleClass] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
-  const handleAkademii = () => {
-    setTitle("Едукација");
-    setText(blockContext.edukacija);
-    setImg(blockContext.edukacija_img);
-    setToggleClass(!toggleClass);
-  };
-  const handleKompanii = () => {
-    setTitle("Компании");
-    setText(blockContext.kompanii);
-    setImg(blockContext.kompanii_img);
-    setToggleClass(!toggleClass);
+  const handleClick = () => {
+    setToggle(!toggle);
   };
 
   return (
     <div className="row mt-5 pt-4 align-items-center" id="partnership">
       <div className="col-md-12 col-lg-5">
-        <h3 className="block-title">{title}</h3>
-        {text}
+        <p className="block-title">{!toggle ? "Едукација" : "Компании"}</p>
+        {!toggle ? blockContext.edukacija : blockContext.kompanii}
         <div className="col-12 d-flex flex-row p-0 mb-4 pt-3 pb-3 pb-lg-0">
           <button
-            onClick={handleAkademii}
+            onClick={handleClick}
             className={
-              toggleClass ? "btn-custom btn-yellow mr-2" : "btn-custom  mr-2"
+              toggle ? "btn-custom btn-yellow mr-2" : "btn-custom  mr-2"
             }
-            disabled={!toggleClass}
+            disabled={!toggle}
           >
             АКАДЕМИИ
           </button>
           <button
-            onClick={handleKompanii}
+            onClick={handleClick}
             className={
-              toggleClass ? "btn-custom  mr-2" : "btn-custom btn-yellow   mr-2 "
+              toggle ? "btn-custom  mr-2" : "btn-custom btn-yellow   mr-2 "
             }
-            disabled={toggleClass}
+            disabled={toggle}
           >
             ЗА КОМПАНИИ
           </button>
         </div>
       </div>
       <div className="col-md-12  col-lg blog-img">
-        <img src={img} alt="block-img" />
+        <img
+          src={toggle ? blockContext.kompanii_img : blockContext.edukacija_img}
+          alt="block-img"
+        />
       </div>
     </div>
   );
@@ -84,7 +75,7 @@ const Edukacija = () => {
 const Nastani = () => {
   return (
     <div className="row mt-5 pt-4 " id="nastani">
-      <h3 className="col-12 mb-3 text-center block-title">Настани</h3>
+      <p className="col-12 mb-5 text-center block-title">Настани</p>
       {nastani_cards.map((item) => (
         <Karticka
           key={item.title}
@@ -110,8 +101,8 @@ const Nastani = () => {
 const ProstorZaNastani = () => {
   return (
     <div className="row mt-5 pt-4 align-items-center">
-      <div className={`col-md-12 col-lg-5`}>
-        <h3 className="block-title">Простор за настани</h3>
+      <div className="col-md-12 col-lg-5">
+        <p className="block-title">Простор за настани</p>
         {blockContext.events_space_1}
         <div className="col-12 p-0 mb-4 pt-3 pb-3 pb-lg-0">
           <Link to="/events_space">
@@ -146,7 +137,7 @@ const Homepage = () => {
 
       <div className="row mt-5 pt-4 align-items-center flex-column text-center">
         <div className={`col-12`}>
-          <h3 className="block-title">Партнери</h3>
+          <p className="block-title">Партнери</p>
         </div>
         <div className="col-12 mb-2">
           <p className="font-weight-normal ideja-text ">

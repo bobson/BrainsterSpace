@@ -37,8 +37,6 @@ const Calendar = () => {
     new Date(year, month, 0).getDay()
   );
 
-  console.log(new Date(year, month, 1).getDay());
-
   const prevMonthDays = [];
   const daysOfTheMonth = [];
   const nextMontDays = [];
@@ -61,6 +59,32 @@ const Calendar = () => {
     ) {
       daysOfTheMonth.push(
         <div className="today" key={i}>
+          {i}
+        </div>
+      );
+    } else if (i === 14 || i === 21) {
+      daysOfTheMonth.push(
+        <div className="red-event" key={i}>
+          <p className="mr-auto d-none d-lg-inline-block">
+            <span className="event-title">Front End Workshop</span>
+
+            <span>10:00 - 15:00ч</span>
+
+            <span>Workshop 5</span>
+          </p>
+          {i}
+        </div>
+      );
+    } else if (i === 12 || i === 26) {
+      daysOfTheMonth.push(
+        <div className="blue-event" key={i}>
+          <p className="mr-auto d-none d-lg-inline-block">
+            <span className="event-title">React Class</span>
+
+            <span>19:30 - 21:30ч</span>
+
+            <span>Class 6</span>
+          </p>
           {i}
         </div>
       );
@@ -105,9 +129,9 @@ const Calendar = () => {
 
   return (
     <>
-      <div className="row mt-5  justyfy-content-between align-items-center">
+      <div className="row mt-5 mb-5  justyfy-content-between align-items-center">
         <div className="col-sm-12 col-md-6 mb-0 mb-md-5">
-          <h3 className="block-title">Календар</h3>
+          <p className="block-title">Календар</p>
         </div>
         <div className="col-sm-12 col-md-6 mb-5 month">
           <p className="float-md-right">
@@ -116,7 +140,7 @@ const Calendar = () => {
             <FiArrowRightCircle role="button" onClick={handleNextMonth} />
           </p>
         </div>
-        <div className="col d-none d-md-flex weekdays ">
+        <div className="col-12 d-none d-md-flex weekdays ">
           <div>НЕД</div>
           <div>ПОН</div>
           <div>ВТО</div>
@@ -130,6 +154,26 @@ const Calendar = () => {
           {daysOfTheMonth}
           {nextMontDays}
         </div>
+      </div>
+      <div className="row mt-5 pt-4 pb-4 d-lg-none nastani flex-row">
+        <div className="col-12 p-0 ml-4 ml-md-0">
+          <p className="block-title">Следни Настани</p>
+        </div>
+        <div className="col-sm-12 mt-4 ml-4 ml-md-0 col-md-5 blue-next-event">
+          <p>
+            12/26.{month}.{year}
+          </p>
+          <p className="font-weight-bold">React Class</p>
+          <p className="mb-0">19:30 - 21:30ч</p>
+        </div>
+        <div className="col-sm-12 col-md-5 ml-4 ml-md-0 mt-4 red-next-event">
+          <p>
+            14/21.{month}.{year}
+          </p>
+          <p className="font-weight-bold">Front End Workshop</p>
+          <p className="mb-0">10:00 - 15:00ч</p>
+        </div>
+        <div className="black"></div>
       </div>
     </>
   );

@@ -1,17 +1,19 @@
 import React from "react";
 
-import img from "../assets/Sliki/Nastani/IMG_7481.jpg";
+import img from "../../assets/Sliki/Nastani/IMG_7481.jpg";
 import { BsPeople } from "react-icons/bs";
 import { RiCalendar2Fill } from "react-icons/ri";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 
-import dataScience from "../assets/Sliki/Za_Nas/edukacija.jpg";
-import marketing from "../assets/Sliki/Za_Nas/edukacija2.jpg";
-import grafickiDizajn from "../assets/Sliki/Za_Nas/edukacija.jpg";
-import frontEnd from "../assets/Sliki/Za_Nas/edukacija1.jpg";
-import fullStack from "../assets/Sliki/Za_Nas/coworking.jpg";
-import softTesting from "../assets/Sliki/Za_Nas/edukacija2.jpg";
+import dataScience from "../../assets/Sliki/Za_Nas/edukacija.jpg";
+import marketing from "../../assets/Sliki/Za_Nas/edukacija2.jpg";
+import grafickiDizajn from "../../assets/Sliki/Za_Nas/edukacija.jpg";
+import frontEnd from "../../assets/Sliki/Za_Nas/edukacija1.jpg";
+import fullStack from "../../assets/Sliki/Za_Nas/coworking.jpg";
+import softTesting from "../../assets/Sliki/Za_Nas/edukacija2.jpg";
+
+import "./academies.css";
 
 const cardContext = [
   {
@@ -54,7 +56,7 @@ const cardContext = [
 
 const AcademyCard = ({ img, title, color, link }) => {
   return (
-    <div className="col-md-6 col-lg-4 pb-3 pt-3">
+    <div className="col-md-6 col-lg-4 p-0 p-2">
       <div
         className="akademy-card d-flex flex-column justify-content-between inner rounded"
         style={{ backgroundColor: color, backgroundImage: `url(${img})` }}
@@ -95,7 +97,7 @@ const Academies = () => {
     <>
       <div className="row mt-5 pt-4 align-items-center">
         <div className={`col-md-12 col-lg-5`}>
-          <h3 className="block-title">Академии</h3>
+          <p className="block-title">Академии</p>
           <p>
             Нашите академии ќе ти помогнат да ги совладаш најбараните вештини на
             денешницата преку интерактивна настава и практична работа на реални

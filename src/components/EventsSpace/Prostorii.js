@@ -1,12 +1,12 @@
 import React from "react";
 
-import { events_cards } from "../lib/cards";
+import { events_cards } from "../../lib/cards";
 
 const Prostorii = () => {
   return (
     <div className="row mt-5 pt-4 align-items-center">
       <div className="col-md-12 col-lg-3">
-        <h3 className="font-weight-bold block-title">Нашите простории</h3>
+        <p className="block-title">Нашите простории</p>
         <p>
           Комплетно адаптибилни. Една сала за 150 учесници или три помали сали
           за групи од по 50 учесника. Училници за од 25 до 40 учесника. Избор од
@@ -20,7 +20,7 @@ const Prostorii = () => {
           {events_cards.map((card, i) => (
             <div
               key={i}
-              className="col-md-6 col-lg-4 blog-img img-events-space "
+              className="col-md-6 col-lg-4 pr-2 pl-2 blog-img img-events-space "
             >
               <img src={card.img} alt="event-space-img" />
               <p className="p-0">{card.text}</p>

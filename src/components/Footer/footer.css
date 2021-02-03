@@ -14,6 +14,10 @@ footer {
   display: inline-block;
 }
 
+.tooltip-btn:hover {
+  text-decoration: underline;
+}
+
 .tooltip-hidden {
   display: none;
 }
@@ -42,13 +46,4 @@ footer {
   border-width: 7px;
   border-style: solid;
   border-color: transparent black transparent transparent;
-}
-
-h6 {
-  font-size: 0.8rem !important;
-}
-
-.footer-links li {
-  font-size: 0.7rem;
-  margin-bottom: 5px;
 }

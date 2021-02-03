@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
 import "./karticka.css";
-import ModalLouncher from "./ModalLouncher";
+import ModalLouncher from "../ModalLouncher/ModalLouncher";
 
 const Karticka = ({ img, title, text, url, imgHeight }) => {
   const [modal, setModal] = useState(false);
@@ -90,7 +90,7 @@ const Karticka = ({ img, title, text, url, imgHeight }) => {
           />
         </div>
         <CardBody className="d-flex flex-column ">
-          <CardTitle className="font-weight-bold" tag="h5">
+          <CardTitle className="font-weight-bold" tag="h4">
             {title}
           </CardTitle>
           <CardText>{text}</CardText>

@@ -1,0 +1,27 @@
+.akademy-card {
+  height: 360px;
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-weight: 900;
+  padding: 0 50px 20px 20px;
+  transition: all 0.5s ease;
+}
+
+.akademy-card:hover {
+  transform: scale(1.03);
+}
+
+.akademy-card h4 {
+  font-weight: 900;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+}
+
+.akademy-card p {
+  font-weight: 900;
+  margin: 8px 0;
+  font-size: 15px;
+  padding: 0;
+}

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
-import { AiOutlinePlus } from "react-icons/ai";
-import { AiFillCloseCircle } from "react-icons/ai";
+// import { AiOutlinePlus } from "react-icons/ai";
+// import { AiFillCloseCircle } from "react-icons/ai";
 
 import "./modalLouncher.css";
 

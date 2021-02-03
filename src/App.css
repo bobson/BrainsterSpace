@@ -1,32 +1,22 @@
-html {
-  /* overflow-x: hidden; */
-}
-
+html,
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 !important;
   box-sizing: border-box;
+  padding-right: 0px !important;
+  overflow-x: hidden;
 }
 
 p {
   line-height: normal;
-  opacity: 0.9;
-  /* padding: 10px 0; */
-}
-
-h1,
-h3,
-h5,
-h6 {
-  font-weight: 700 !important;
-}
-
-h5 {
-  font-size: 20px !important;
 }
 
 a:hover {
   text-decoration: none !important;
+}
+
+.block-title {
+  font-weight: 700;
 }
 
 .line_through {
@@ -53,22 +43,6 @@ a:hover {
   color: black;
 }
 
-/* ova ne treba se resava so pogornata klasa */
-/* .btn-custom-yellow {
-  color: black;
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  background-color: #ffc107;
-  border: none;
-  border-radius: 5px;
-  padding: 0 30px;
-  font-size: 12px;
-  height: 40px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: all 1s;
-} */
-
 .btn-custom svg {
   margin-right: 5px;
   width: 15px;
@@ -77,9 +51,10 @@ a:hover {
 
 .btn-custom:hover {
   background-color: #e0a800;
-  /* transform: translateY(-2px); */
+  transform: translateY(-2px);
   color: black;
   transform: scale(1.05);
+  z-index: 1;
 }
 
 .btn-custom:disabled:hover {
@@ -87,13 +62,6 @@ a:hover {
   transform: translateY(0px);
   color: #ffc107;
 }
-
-/* .btn-custom-yellow:hover {
-  background-color: #e0a800;
-}
-.btn-custom-yellow:disabled:hover {
-  background-color: #ffc107;
-} */
 
 .title {
   background-image: url("./assets/Sliki/Nastani/IMG_7481.jpg");
@@ -136,65 +104,10 @@ img {
   width: 100vh;
 }
 
-.btn-custom-2 {
-  font-size: 1rem;
-  background: black;
-  color: white;
-  border: none;
-  padding: 8px;
-  text-align: left;
-  font-weight: 900;
-  align-items: center;
-}
-
-.btn-icon svg {
-  height: 1.6rem;
-  width: 1.6rem;
-  color: #fcd232;
-}
-
-.event-host-img {
-  max-width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-
-.img-events-space img {
-  height: 180px;
-}
-
-.akademy-card {
-  height: 350px;
-  background-blend-mode: soft-light;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
-  font-weight: 900;
-  padding: 0 50px 20px 20px;
-  transition: all 1s ease;
-}
-
-.akademy-card:hover {
-  transform: scale(1.1);
-}
-
-.akademy-card h4 {
-  font-weight: 900;
-  margin-top: 1rem;
-  font-size: 1.5rem;
-}
-
-.akademy-card p {
-  font-weight: 900;
-  margin: 8px 0;
-  font-size: 13px;
-  padding: 0;
-}
-
 /* Small devices (landscape phones, 544px and up) */
 @media (min-width: 360px) {
   .block-title {
-    font-size: 25px;
+    font-size: 30px;
   }
   .title h1 {
     font-size: 25px;
@@ -203,6 +116,19 @@ img {
   label,
   .val-mess {
     font-size: 10px;
+  }
+  .days div {
+    width: calc((100% - 70px) / 7);
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc((100vw - 100px) / 7);
+    background: #f5f5f5;
+    font-weight: 900;
+    border-radius: 50%;
+    font-size: 1.2rem;
   }
 }
 
@@ -216,12 +142,22 @@ img {
     font-size: 35px;
     width: 80%;
   }
+
   label,
   .val-mess {
     font-size: 15px;
   }
+
   .ideja-text {
     font-size: 25px;
+  }
+
+  .days div {
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 1.7rem;
   }
 }
 
@@ -243,13 +179,19 @@ img {
   .smaller-kitchen-img {
     height: 200px;
   }
+
   .smaller-kitchen-img-1 {
     height: 200px;
     position: absolute;
     bottom: 0;
   }
+
   .bigger-kitchen-img {
     height: 400px;
+  }
+
+  .days div {
+    height: 80px;
   }
 }
 
@@ -257,7 +199,7 @@ img {
 @media (min-width: 1800px) {
   .block-title {
     font-size: 50px;
-    /* width: 50%; */
+    width: 50%;
   }
 }
 
@@ -265,9 +207,4 @@ img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-}
-
-.smaller-kitchen-img-1 {
-  margin: 1px !important;
-  padding-top: 20px !important;
 }

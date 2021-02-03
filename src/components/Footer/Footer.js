@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/brainster_space_logo.svg";
+import logo from "../../assets/brainster_space_logo.svg";
 
 import { Link } from "react-router-dom";
 
@@ -12,11 +12,11 @@ import "./footer.css";
 const Footer = () => {
   const [popup, setPopup] = useState(false);
   return (
-    <footer className="bg-light mt-5">
+    <footer className="bg-light m-0">
       <div className="container">
         <div className="row pt-5 pb-4 flex-nowrap flex-column flex-md-row justify-content-between">
           <div className="col-sm-6 order-2 order-md-1 col-md-4 col-lg-2">
-            <h6>Корисни Линкови</h6>
+            <p className="display-6 font-weight-bold">Корисни Линкови</p>
             <ul className="list-unstyled footer-links">
               <li
                 role="button"
@@ -60,7 +60,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="order-3 order-md-2 col-md-4 col-lg-2 text-md-center mb-3">
-            <h6 className="mb-3">Социални мрежи</h6>
+            <p className="display-6 mb-3 font-weight-bold">Социални мрежи</p>
             <div className="d-flex col-6 col-md-12 p-0 justify-content-md-center social">
               <a href="https://www.facebook.com/" target="blank">
                 <FaFacebook style={{ color: "#3b5998" }} />

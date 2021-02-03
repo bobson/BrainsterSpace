@@ -3,31 +3,27 @@
   background-color: black;
   color: white;
   opacity: 1;
-  padding: 0 8px 6px 8px;
+  padding: 3px 10px 6px 10px;
   display: inline-block;
   margin-top: 10px;
 }
 
-.modal-body .col-12 {
-  /* padding: 0 5px; */
-}
-
-label {
-  margin-bottom: 0 !important;
+.modal-content label {
+  margin-bottom: 0;
   font-weight: bold;
   /* font-size: 13px; */
   /* padding: 0 !important; */
 }
 
-input,
+.modal-content input,
 textarea {
   width: 100%;
   border-radius: 5px;
   border: 1px solid lightgray;
   /* padding: 0 !important; */
 }
-.modal-title {
-  font-size: 30px !important;
+.modal-content h5 {
+  font-size: 30px;
 }
 
 .val-mess {

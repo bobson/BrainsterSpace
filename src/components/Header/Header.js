@@ -1,24 +1,15 @@
 import React, { useState } from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem,
-  // NavLink,
-} from "reactstrap";
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
 
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlinePlus } from "react-icons/ai";
 
-import logo from "../assets/brainster_space_logo.svg";
-import ModalLouncher from "./ModalLouncher";
+import logo from "../../assets/brainster_space_logo.svg";
+import ModalLouncher from "../Homepage/ModalLouncher/ModalLouncher";
 
 import { Link } from "react-router-dom";
 
 import { NavLink } from "react-router-dom";
-
-// import MaterialModal from "./MaterialModal";
 
 import "./header.css";
 
@@ -32,7 +23,7 @@ const Header = () => {
   return (
     <Navbar color="white" expand="lg" className="p-0  p-lg-3">
       <div className="container-lg">
-        <Link to="/" className="navbar-brand p-4  p-lg-0">
+        <Link to="/" className="navbar-brand p-4 mr-4 p-lg-0">
           <img src={logo} alt="logo" />
         </Link>
         <div className="d-none d-md-block d-lg-none ml-auto">

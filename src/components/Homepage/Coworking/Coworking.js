@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import image from "../assets/Sliki/Za_Nas/coworking.jpg";
+import image from "../../../assets/Sliki/Za_Nas/coworking.jpg";
 
 import "./coworking.css";
 
@@ -12,7 +12,7 @@ const Coworking = () => {
       id="coworking"
     >
       <div className="col-md-12 col-lg-5 ">
-        <span class="badge badge-pill badge-warning p-2">SOLD OUT</span>
+        <span className="badge badge-pill badge-warning p-2">SOLD OUT</span>
         <h3 className="block-title line_through">Coworking</h3>
         <p className="line_through">
           Биди дел од заедницата на иноватори, креативци и претприемачи.

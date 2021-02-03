@@ -25,14 +25,14 @@ const btnContent = [
 const Offers = () => {
   return (
     <div className="row mt-5 p-3 align-items-start flex-column flex-md-row">
-      <h3 className="text-left col-12 p-0 block-title">Нудиме</h3>
+      <p className="text-left col-12 p-0 block-title">Нудиме</p>
       {btnContent.map((el) => (
         <button
           key={el.text}
           className="btn-custom-2 pr-4 pl-4 rounded d-flex mb-3 mr-3"
         >
           <span className="btn-icon mr-2">{el.icon}</span>
-          <span className="btn-text  ">{el.text}</span>
+          <span className="btn-text">{el.text}</span>
         </button>
       ))}
     </div>
