@@ -64,8 +64,8 @@ const Edukacija = () => {
         </div>
       </div>
       <div className="col-md-12  col-lg blog-img">
-        <LazyImage
-          src={toggle ? blockContext.kompanii_img : blockContext.edukacija_img}
+        <img
+          src={!toggle ? blockContext.edukacija_img : blockContext.kompanii_img}
           alt="block-img"
         />
       </div>
@@ -137,7 +137,7 @@ const Homepage = () => {
       <ProstorZaNastani />
 
       <div className="row mt-5 pt-4 align-items-center flex-column text-center">
-        <div className={`col-12`}>
+        <div className="col-12">
           <p className="block-title">Партнери</p>
         </div>
         <div className="col-12 mb-2">
