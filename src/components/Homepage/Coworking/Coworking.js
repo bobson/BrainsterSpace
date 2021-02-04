@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import image from "../../../assets/Sliki/Za_Nas/coworking.jpg";
+import LazyImage from "../../LazyImage/LazyImage";
 
 import "./coworking.css";
 
@@ -34,7 +35,7 @@ const Coworking = () => {
         </div>
       </div>
       <div className="col-md-12 col-lg-7 blog-img">
-        <img src={image} alt="edukacija-img" />
+        <LazyImage src={image} alt="edukacija-img" />
       </div>
     </div>
   );

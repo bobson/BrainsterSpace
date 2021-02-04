@@ -1,6 +1,7 @@
 import React from "react";
 
 import { events_cards } from "../../lib/cards";
+import LazyImage from "../LazyImage/LazyImage";
 
 const Prostorii = () => {
   return (
@@ -22,7 +23,7 @@ const Prostorii = () => {
               key={i}
               className="col-md-6 col-lg-4 pr-2 pl-2 blog-img img-events-space "
             >
-              <img src={card.img} alt="event-space-img" />
+              <LazyImage src={card.img} alt="event-space-img" />
               <p className="p-0">{card.text}</p>
             </div>
           ))}

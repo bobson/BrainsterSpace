@@ -176,7 +176,7 @@ img {
     font-size: 30px;
   }
 
-  .smaller-kitchen-img {
+  .smaller-kitchen-img img {
     height: 200px;
   }
 
@@ -186,7 +186,7 @@ img {
     bottom: 0;
   }
 
-  .bigger-kitchen-img {
+  .bigger-kitchen-img img {
     height: 400px;
   }
 

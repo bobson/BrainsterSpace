@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {
   Card,
-  CardImg,
+  // CardImg,
   CardText,
   CardBody,
   CardTitle,
@@ -14,6 +14,7 @@ import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
 import "./karticka.css";
 import ModalLouncher from "../ModalLouncher/ModalLouncher";
+import LazyImage from "../../LazyImage/LazyImage";
 
 const Karticka = ({ img, title, text, url, imgHeight }) => {
   const [modal, setModal] = useState(false);
@@ -80,13 +81,12 @@ const Karticka = ({ img, title, text, url, imgHeight }) => {
     <div className="col-sm-12 col-md-6 col-lg-4 p-2 d-flex aligin-items-stretch ">
       <Card>
         <div className="inner">
-          <CardImg
+          <LazyImage
             top
             width="100%"
             height={imgHeight}
             src={img}
             alt="Card image cap"
-            className="rounded"
           />
         </div>
         <CardBody className="d-flex flex-column ">

@@ -11,6 +11,7 @@ import { FiArrowRight } from "react-icons/fi";
 import { FaRegCalendarAlt } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
+import LazyImage from "../LazyImage/LazyImage";
 
 const ZaNas = () => {
   return (
@@ -63,7 +64,7 @@ const Edukacija = () => {
         </div>
       </div>
       <div className="col-md-12  col-lg blog-img">
-        <img
+        <LazyImage
           src={toggle ? blockContext.kompanii_img : blockContext.edukacija_img}
           alt="block-img"
         />
@@ -114,7 +115,7 @@ const ProstorZaNastani = () => {
         </div>
       </div>
       <div className="col-md-12 col-lg blog-img">
-        <img src={blockContext.events_space_img} alt="block-img" />
+        <LazyImage src={blockContext.events_space_img} alt="block-img" />
       </div>
     </div>
   );

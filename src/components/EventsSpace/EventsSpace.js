@@ -10,6 +10,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { blockContext } from "../../lib/cards";
 
 import "./eventsSpace.css";
+import LazyImage from "../LazyImage/LazyImage";
 
 const ProstorZaNastani = () => {
   return (
@@ -25,7 +26,7 @@ const ProstorZaNastani = () => {
         </a>
       </div>
       <div className="col-md-12 col-lg blog-img">
-        <img src={blockContext.events_space_img} alt="block-img" />
+        <LazyImage src={blockContext.events_space_img} alt="block-img" />
       </div>
     </div>
   );
@@ -42,8 +43,8 @@ const EventsSpace = () => {
         className="row mt-5 pt-4 flex-lg-row-reverse justify-content-between align-items-center"
         id="event-host"
       >
-        <div className="col-md col-lg-4">
-          <img src={eventHostImg} alt="host-img" className="event-host-img" />
+        <div className="col-md col-lg-4 event-host-img">
+          <LazyImage src={eventHostImg} alt="host-img" />
         </div>
         <div className="col-md-6 col-lg-4">
           <p className="block-title">Event Host</p>
