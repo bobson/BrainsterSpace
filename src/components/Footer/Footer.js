@@ -15,7 +15,7 @@ const Footer = () => {
     <footer className="bg-light m-0">
       <div className="container">
         <div className="row pt-5 pb-4 flex-nowrap flex-column flex-md-row justify-content-between">
-          <div className="col-sm-6 order-2 order-md-1 col-md-4 col-lg-2">
+          <div className="col-sm-4 order-2 order-md-1 col-md-4 col-lg-2">
             <p className="display-6 font-weight-bold">Корисни Линкови</p>
             <ul className="list-unstyled footer-links">
               <li
@@ -59,7 +59,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="order-3 order-md-2 col-md-4 col-lg-2 text-md-center mb-3">
+          <div className="order-3 order-md-2 col-md-4 col-sm-4 col-lg-2 text-md-center mb-3">
             <p className="display-6 mb-3 font-weight-bold">Социални мрежи</p>
             <div className="d-flex col-6 col-md-12 p-0 justify-content-md-center social">
               <a href="https://www.facebook.com/" target="blank">
@@ -79,16 +79,9 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="col-sm-6 order-1 order-md-3 col-md-4 col-lg-6 ml-md-auto d-flex">
-            <Link to="." className="ml-md-auto pb-5">
-              <img
-                src={logo}
-                alt="logo"
-                // className="img-fluid"
-                // height="80%"
-                // width="80px"
-                className="img-fluid"
-              />
+          <div className="col-sm-4 order-1 order-md-3 col-md-4 col-lg-6 ml-md-auto d-flex">
+            <Link to="/" className="ml-md-auto pb-5">
+              <img src={logo} alt="logo" height="70%" />
             </Link>
           </div>
         </div>

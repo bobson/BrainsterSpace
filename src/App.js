@@ -19,7 +19,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Header />
-      <div className="container pb-5">
+      <div className="container">
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/coworking" component={Coworking} />

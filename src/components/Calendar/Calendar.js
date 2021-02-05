@@ -67,9 +67,7 @@ const Calendar = () => {
         <div className="red-event" key={i}>
           <p className="mr-auto d-none d-lg-inline-block">
             <span className="event-title">Front End Workshop</span>
-
             <span>10:00 - 15:00ч</span>
-
             <span>Workshop 5</span>
           </p>
           {i}
@@ -161,14 +159,14 @@ const Calendar = () => {
         </div>
         <div className="col-sm-12 mt-4 ml-4 ml-md-0 col-md-5 blue-next-event">
           <p>
-            12/26.{month}.{year}
+            12/26.{month < 9 ? "0" + (month + 1) : month + 1}.{year}
           </p>
           <p className="font-weight-bold">React Class</p>
           <p className="mb-0">19:30 - 21:30ч</p>
         </div>
         <div className="col-sm-12 col-md-5 ml-4 ml-md-0 mt-4 red-next-event">
           <p>
-            14/21.{month}.{year}
+            14/21.{month < 9 ? "0" + (month + 1) : month + 1}.{year}
           </p>
           <p className="font-weight-bold">Front End Workshop</p>
           <p className="mb-0">10:00 - 15:00ч</p>

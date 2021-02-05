@@ -56,7 +56,7 @@ const cardContext = [
 
 const AcademyCard = ({ img, title, color, link }) => {
   return (
-    <div className="col-md-6 col-lg-4 p-0 p-2">
+    <div className="col-md-6 col-lg-4 p-0 p-2 mb-5">
       <div
         className="akademy-card d-flex flex-column justify-content-between inner rounded"
         style={{ backgroundColor: color, backgroundImage: `url(${img})` }}

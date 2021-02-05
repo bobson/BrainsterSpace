@@ -192,6 +192,8 @@ img {
 
   .days div {
     height: 80px;
+    /* flex-direction: column; */
+    position: relative;
   }
 }
 
@@ -201,10 +203,4 @@ img {
     font-size: 60px;
     width: 50%;
   }
-}
-
-.img-fluid {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
 }

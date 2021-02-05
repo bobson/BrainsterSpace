@@ -23,19 +23,22 @@
 }
 
 .days p {
-  font-size: 0.8rem;
   align-self: flex-start;
   font-weight: normal;
+  position: absolute;
+  top: 5%;
+  left: 5%;
 }
 
 .days .event-title {
-  font-size: 0.9rem;
-  font-weight: 900;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 .days span {
   display: block;
   padding-bottom: 3px;
+  font-size: 12px;
 }
 
 .days .red-event {
