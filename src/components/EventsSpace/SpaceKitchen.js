@@ -20,7 +20,7 @@ const SpaceKitchen = () => {
       </div>
       <div className="col-md-12 col-lg-8">
         <div className="row">
-          <div className="col-md-6 blog-img smaller-kitchen-img pb-2">
+          <div className="col-md-6 blog-img smaller-kitchen-img pb-3">
             <LazyImage src={img3} alt="kitchen-img" />
           </div>
           <div className="col-md-6 bigger-kitchen-img pt-3 pt-md-0 blog-img">
@@ -30,7 +30,7 @@ const SpaceKitchen = () => {
             <div className="col-md-6 col-lg-3 pb-3 mb-1 pb-md-0 mb-md-0 ">
               <LazyImage src={img1} alt="kitchen-img" />
             </div>
-            <div className="col-md-6 col-lg-3 ">
+            <div className="col-md-6 col-lg-3 pb-3 mb-1 pb-md-0 mb-md-0">
               <LazyImage src={img2} alt="kitchen-img" />
             </div>
           </div>

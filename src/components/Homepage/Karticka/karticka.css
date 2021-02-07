@@ -7,7 +7,7 @@
 }
 
 .card:hover img {
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 
 .card:hover svg {
@@ -25,11 +25,3 @@
 .card-link button {
   padding: 0;
 }
-
-/* .card h5 {
-  font-size: 22px;
-} */
-
-/* .card p {
-  font-size: 16px;
-} */

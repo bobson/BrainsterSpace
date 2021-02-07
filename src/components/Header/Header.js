@@ -5,7 +5,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlinePlus } from "react-icons/ai";
 
 import logo from "../../assets/brainster_space_logo.svg";
-import ModalLouncher from "../Homepage/ModalLouncher/ModalLouncher";
+import ModalLouncher from "../ModalLouncher/ModalLouncher";
 
 import { Link } from "react-router-dom";
 
@@ -31,13 +31,13 @@ const Header = () => {
             toggleModal={toggleModal}
             modal={modal}
             email="Емаил (задолжително)"
+            telnum="Телефонски број (задолжително)"
           >
             <button className="btn-custom " onClick={() => toggleModal()}>
               <AiOutlinePlus />
               ПРИКЛУЧИ СE
             </button>
           </ModalLouncher>
-          {/* <MaterialModal /> */}
         </div>
         <NavbarToggler onClick={toggle} className="mr-3 ml-2">
           <AiOutlineMenu />
@@ -79,6 +79,7 @@ const Header = () => {
                 toggleModal={toggleModal}
                 modal={modal}
                 email="Емаил (задолжително)"
+                telnum="Телефонски број (задолжително)"
               >
                 <button className="btn-custom" onClick={() => toggleModal()}>
                   <AiOutlinePlus />

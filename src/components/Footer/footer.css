@@ -4,8 +4,8 @@ footer {
 }
 
 .social svg {
-  height: 1.4rem;
-  width: 1.4rem;
+  height: 2rem;
+  width: 2rem;
   /* margin: 10px; */
 }
 
@@ -41,7 +41,7 @@ footer {
   content: "";
   position: absolute;
   right: 100%;
-  top: 85%;
+  top: 82%;
   margin-left: -7px;
   border-width: 7px;
   border-style: solid;

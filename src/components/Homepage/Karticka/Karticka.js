@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
 import "./karticka.css";
-import ModalLouncher from "../ModalLouncher/ModalLouncher";
+import ModalLouncher from "../../ModalLouncher/ModalLouncher";
 import LazyImage from "../../LazyImage/LazyImage";
 
 const Karticka = ({ img, title, text, url, imgHeight }) => {

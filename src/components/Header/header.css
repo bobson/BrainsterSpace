@@ -25,10 +25,6 @@
 }
 
 .active:after {
-  content: "";
-  display: block;
-  margin: auto;
-  height: 3px;
   width: 100%;
   background: #fcd232;
 }
@@ -72,4 +68,16 @@
 
 .show ul {
   background-color: black;
+}
+
+.collapsing ul {
+  background-color: black;
+}
+
+.collapsing button {
+  display: none;
+}
+
+.collapsing .active:after {
+  width: 0;
 }

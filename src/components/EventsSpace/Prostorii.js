@@ -21,7 +21,7 @@ const Prostorii = () => {
           {events_cards.map((card, i) => (
             <div
               key={i}
-              className="col-md-6 col-lg-4 pr-2 pl-2 blog-img img-events-space "
+              className="col-md-6 col-lg-4  blog-img img-events-space "
             >
               <LazyImage src={card.img} alt="event-space-img" />
               <p className="p-0">{card.text}</p>

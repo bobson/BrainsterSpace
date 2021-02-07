@@ -8,7 +8,7 @@ body {
 }
 
 p {
-  line-height: normal;
+  line-height: 1.1rem;
 }
 
 a:hover {
@@ -17,6 +17,7 @@ a:hover {
 
 .block-title {
   font-weight: 700;
+  line-height: normal;
 }
 
 .line_through {
@@ -61,27 +62,6 @@ a:hover {
   background-color: black;
   transform: translateY(0px);
   color: #ffc107;
-}
-
-.title {
-  background-image: url("./assets/Sliki/Nastani/IMG_7481.jpg");
-  background-size: cover;
-  width: 100vw;
-  height: 80vh;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-
-.title h1 {
-  color: white;
-  margin: auto;
 }
 
 .blog-img {
@@ -192,7 +172,6 @@ img {
 
   .days div {
     height: 80px;
-    /* flex-direction: column; */
     position: relative;
   }
 }

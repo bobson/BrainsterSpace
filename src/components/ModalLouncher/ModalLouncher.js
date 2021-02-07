@@ -1,8 +1,7 @@
 import React from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
-// import { AiOutlinePlus } from "react-icons/ai";
-// import { AiFillCloseCircle } from "react-icons/ai";
+import { FiArrowRight } from "react-icons/fi";
 
 import "./modalLouncher.css";
 
@@ -10,7 +9,8 @@ import "./modalLouncher.css";
 import { useForm } from "react-hook-form";
 
 const ModalLouncher = (props) => {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, watch, handleSubmit, errors } = useForm();
+  const showTextLength = watch("sorabotka");
   const onSubmit = (data) => console.log(data);
 
   return (
@@ -19,7 +19,7 @@ const ModalLouncher = (props) => {
 
       <Modal isOpen={props.modal} toggle={props.toggleModal}>
         <ModalHeader
-          className="border-0 d-flex align-item-center font-weight-bold"
+          className="border-0 d-flex align-item-center"
           toggle={props.toggleModal}
         >
           Приклучи се
@@ -30,7 +30,7 @@ const ModalLouncher = (props) => {
               <div className="col-12">
                 <label htmlFor="name">Име и Презиме (задолжително)</label>
                 <span className="val-mess">
-                  {errors.name && "Внесете Име и Презиме"}
+                  {errors.name && errors.name.message}
                 </span>
               </div>
               <div className="col-12 mb-2">
@@ -40,8 +40,9 @@ const ModalLouncher = (props) => {
                   id="name"
                   placeholder="Внесете Име и Презиме"
                   ref={register({
-                    required: true,
-                    minLength: 2,
+                    required: { value: true, message: "Внесете Име и Презиме" },
+                    pattern: { value: /\S+/, message: "Внесете Име и Презиме" },
+                    minLength: { value: 2, message: "Минимум 2 карактери" },
                     maxLength: 80,
                   })}
                 />
@@ -51,19 +52,21 @@ const ModalLouncher = (props) => {
                   <div className="col-12">
                     <label htmlFor="email">{props.email}</label>
                     <span className="val-mess">
-                      {errors.email && "Внесете Е-Маил"}
+                      {errors.email && errors.email.message}
                     </span>
                   </div>
                   <div className="col-12 mb-2">
                     <input
-                      type="email"
+                      type="text"
                       name="email"
                       id="email"
                       placeholder="Внесете Е-Маил"
                       ref={register({
-                        required: true,
-                        minLength: 4,
-                        maxLength: 80,
+                        required: { value: true, message: "Внесете Е-Маил" },
+                        pattern: {
+                          value: /\S+@\S+\.\S+/,
+                          message: "Внесете валиден емаил",
+                        },
                       })}
                     />
                   </div>
@@ -90,19 +93,31 @@ const ModalLouncher = (props) => {
                   <div className="col-12">
                     <label htmlFor="telnum">{props.telnum}</label>
                     <span className="val-mess">
-                      {errors.telnum && "Внесете Телефонски Број"}
+                      {errors.telnum && errors.telnum.message}
+                      {errors.telnum?.type === "number" &&
+                        "Внесете само броеви"}
+                      {errors.telnum?.type === "minLength" &&
+                        "Минумум 4 броеви"}
+                      {errors.telnum?.type === "maxLength" &&
+                        "Максимум 16 броеви"}
                     </span>
                   </div>
                   <div className="col-12 mb-2">
                     <input
-                      type="number"
+                      type="text"
                       name="telnum"
                       id="telnum"
                       placeholder="Внесете Телефонски Број"
                       ref={register({
-                        required: true,
-                        minLength: 6,
-                        maxLength: 16,
+                        required: {
+                          value: true,
+                          message: "Внесете Телефонски Број",
+                        },
+                        validate: {
+                          number: (value) => !isNaN(value),
+                          minLength: (value) => value.length >= 4,
+                          maxLength: (value) => value.length <= 16,
+                        },
                       })}
                     />
                   </div>
@@ -112,7 +127,10 @@ const ModalLouncher = (props) => {
                 <>
                   <div className="col-12">
                     <label htmlFor="corabotka">{props.text}</label>
-                    <span className="max-text">300</span>
+                    <span className="max-text">
+                      {/* Динамички го поставува бројот на преостанатите карактери */}
+                      {showTextLength ? 300 - showTextLength.length : 300}
+                    </span>
                   </div>
                   <div className="col-12">
                     <textarea
@@ -120,7 +138,9 @@ const ModalLouncher = (props) => {
                       id="sorabotka"
                       rows="5"
                       placeholder="Во 300 карактери, опишете зошто сакате да соработуваме"
-                      ref={register({ maxLength: 300 })}
+                      ref={register({
+                        maxLength: 300,
+                      })}
                     />
                   </div>
                 </>
@@ -129,13 +149,14 @@ const ModalLouncher = (props) => {
           </ModalBody>
           <ModalFooter className="border-0">
             <Button
-              className="text-small"
+              // className="text-small"
               color="none"
               onClick={props.toggleModal}
             >
               ИСКЛУЧИ
             </Button>
             <button type="submit" className="btn-custom float-right">
+              <FiArrowRight />
               ИСПРАТИ ФОРМА
             </button>{" "}
           </ModalFooter>
@@ -146,7 +167,3 @@ const ModalLouncher = (props) => {
 };
 
 export default ModalLouncher;
-
-// ModalLouncher.defaultProps = {
-//   telnum: "Телефонски Број (задолжително)",
-// };

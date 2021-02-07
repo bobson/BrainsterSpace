@@ -13,6 +13,8 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import LazyImage from "../LazyImage/LazyImage";
 
+import "./homepage.css";
+
 const ZaNas = () => {
   return (
     <div className="row mt-5 4" id="za-nas">
@@ -136,7 +138,7 @@ const Homepage = () => {
       <Coworking />
       <ProstorZaNastani />
 
-      <div className="row mt-5 pt-4 mb-5 align-items-center flex-column text-center">
+      <div className="row mt-5 pt-4 mb-2 mb-lg-5 align-items-center flex-column text-center">
         <div className="col-12">
           <p className="block-title">Партнери</p>
         </div>

@@ -6,57 +6,13 @@ import { RiCalendar2Fill } from "react-icons/ri";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 
-import dataScience from "../../assets/Sliki/Za_Nas/edukacija.jpg";
-import marketing from "../../assets/Sliki/Za_Nas/edukacija2.jpg";
-import grafickiDizajn from "../../assets/Sliki/Za_Nas/edukacija.jpg";
-import frontEnd from "../../assets/Sliki/Za_Nas/edukacija1.jpg";
-import fullStack from "../../assets/Sliki/Za_Nas/coworking.jpg";
-import softTesting from "../../assets/Sliki/Za_Nas/edukacija2.jpg";
-
 import "./academies.css";
 
-const cardContext = [
-  {
-    title: "Академија за графички дизајн",
-    color: "#66316e",
-    img: grafickiDizajn,
-    link: "https://design.brainster.co/",
-  },
-  {
-    title: "Академија за дигитален маркетинг",
-    color: "#8f3d4f",
-    img: marketing,
-    link: "https://marketpreneurs.brainster.co/",
-  },
-  {
-    title: "Академија за Front-end програмирање",
-    color: "#398e57",
-    img: frontEnd,
-    link: "https://codepreneurs.brainster.co/",
-  },
-  {
-    title: "Академија за Full-stack програмирање",
-    color: "#2d7141",
-    img: fullStack,
-    link: "https://codepreneurs.brainster.co/",
-  },
-  {
-    title: "Академија за Data science ",
-    color: "#444b69",
-    img: dataScience,
-    link: "https://datascience.brainster.co/",
-  },
-  {
-    title: "Академија за  software testing",
-    color: "#2f4941",
-    img: softTesting,
-    link: "https://qa.brainster.co/",
-  },
-];
+import { academy_cards } from "../../lib/cards";
 
 const AcademyCard = ({ img, title, color, link }) => {
   return (
-    <div className="col-md-6 col-lg-4 p-0 p-2 mb-5">
+    <div className="col-md-6 col-lg-4 p-0 p-2">
       <div
         className="akademy-card d-flex flex-column justify-content-between inner rounded"
         style={{ backgroundColor: color, backgroundImage: `url(${img})` }}
@@ -96,7 +52,7 @@ const Academies = () => {
   return (
     <>
       <div className="row mt-5 pt-4 align-items-center">
-        <div className={`col-md-12 col-lg-5`}>
+        <div className="col-md-12 col-lg-5">
           <p className="block-title">Академии</p>
           <p>
             Нашите академии ќе ти помогнат да ги совладаш најбараните вештини на
@@ -116,8 +72,8 @@ const Academies = () => {
         </div>
       </div>
 
-      <div className="row  pt-4">
-        {cardContext.map((el) => (
+      <div className="row  pt-4 pb-5">
+        {academy_cards.map((el) => (
           <AcademyCard
             key={el.title}
             img={el.img}

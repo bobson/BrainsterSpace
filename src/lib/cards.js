@@ -1,3 +1,4 @@
+import edukacijaImg1 from "../assets/Sliki/Za_Nas/edukacija.jpg";
 import edukacijaImg from "../assets/Sliki/Za_Nas/edukacija1.jpg";
 import kompaniiImg from "../assets/Sliki/Za_Nas/edukacija2.jpg";
 import nastaniImg from "../assets/Sliki/Za_Nas/nastani.jpg";
@@ -109,7 +110,6 @@ export const blockContext = {
       во областа дигитален маркетинг, дизајн, програмирање и Data Science.
     </p>
   ),
-
   edukacija_img: edukacijaImg,
 
   kompanii: (
@@ -124,7 +124,6 @@ export const blockContext = {
       компаниите.
     </p>
   ),
-
   kompanii_img: kompaniiImg,
 
   coworking: (
@@ -134,7 +133,6 @@ export const blockContext = {
       одлучи секој месец со кого да ги дели своите канцеларии.
     </p>
   ),
-
   coworking_img: coworkingImg,
 
   events_space_1: (
@@ -154,6 +152,44 @@ export const blockContext = {
       20 учесници. Контактирај не за да хостираме одличен настан
     </p>
   ),
-
   events_space_img: prostorImg,
 };
+
+export const academy_cards = [
+  {
+    title: "Академија за графички дизајн",
+    color: "#66316e",
+    img: edukacijaImg1,
+    link: "https://design.brainster.co/",
+  },
+  {
+    title: "Академија за дигитален маркетинг",
+    color: "#8f3d4f",
+    img: kompaniiImg,
+    link: "https://marketpreneurs.brainster.co/",
+  },
+  {
+    title: "Академија за Front-end програмирање",
+    color: "#398e57",
+    img: edukacijaImg1,
+    link: "https://codepreneurs.brainster.co/",
+  },
+  {
+    title: "Академија за Full-stack програмирање",
+    color: "#2d7141",
+    img: edukacijaImg,
+    link: "https://codepreneurs.brainster.co/",
+  },
+  {
+    title: "Академија за Data science ",
+    color: "#444b69",
+    img: coworkingImg,
+    link: "https://datascience.brainster.co/",
+  },
+  {
+    title: "Академија за  software testing",
+    color: "#2f4941",
+    img: kompaniiImg,
+    link: "https://qa.brainster.co/",
+  },
+];

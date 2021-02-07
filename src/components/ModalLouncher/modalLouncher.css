@@ -1,18 +1,33 @@
 .close span {
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: black;
   color: white;
   opacity: 1;
-  padding: 3px 10px 6px 10px;
+  padding: 0 8px 6px 8px;
   display: inline-block;
-  margin-top: 10px;
+}
+
+.modal-header {
+  align-items: center;
+  display: flex;
+}
+
+.modal-header button {
+  align-self: center;
+  opacity: 1;
+}
+
+.modal-title {
+  font-weight: 700;
 }
 
 .modal-content label {
   margin-bottom: 0;
   font-weight: bold;
-  /* font-size: 13px; */
-  /* padding: 0 !important; */
+}
+
+.modal-content input {
+  height: 2rem;
 }
 
 .modal-content input,
@@ -20,16 +35,14 @@ textarea {
   width: 100%;
   border-radius: 5px;
   border: 1px solid lightgray;
-  /* padding: 0 !important; */
+  padding-left: 10px;
 }
 .modal-content h5 {
   font-size: 30px;
 }
 
 .val-mess {
-  /* display: inline-block; */
   color: red;
-  /* font-size: 0.7rem; */
   float: right;
   position: absolute;
   right: 20px;
@@ -40,4 +53,9 @@ textarea {
   right: 20px;
   bottom: 1px;
   font-size: 0.7rem;
+}
+
+.modal-footer .btn {
+  font-size: 12px;
+  font-weight: 700;
 }

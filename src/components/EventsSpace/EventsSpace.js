@@ -19,7 +19,7 @@ const ProstorZaNastani = () => {
         <p className="block-title">Простор за настани</p>
         {blockContext.events_space_2}
         <a href="#event-host">
-          <button className="btn-custom mb-4">
+          <button className="btn-custom mb-4 mt-5">
             <AiOutlinePlus />
             БУКИРАЈ НЕ
           </button>
@@ -43,14 +43,14 @@ const EventsSpace = () => {
         className="row mt-5 pt-4 mb-5 flex-lg-row-reverse justify-content-between align-items-center"
         id="event-host"
       >
-        <div className="col-md col-lg-4 event-host-img">
+        <div className="col-md col-lg-5 event-host-img">
           <LazyImage src={eventHostImg} alt="host-img" />
         </div>
         <div className="col-md-6 col-lg-4">
           <p className="block-title">Event Host</p>
           <p className="p-0">Ања Макеска</p>
           <p className="p-0">anja@brainster.co</p>
-          <p className="p-0">+389 (0)70 233414</p>
+          <p className="p-0">+389 (0)70 233 414</p>
         </div>
       </div>
     </>
