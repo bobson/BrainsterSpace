@@ -3,13 +3,13 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 
-import Homepage from "./components/HomePage/Homepage";
+import Homepage from "./components/Homepage/Homepage";
 import Header from "./components/Header/Header";
 import Calendar from "./components/CalendarPage/Calendar";
 import EventsSpace from "./components/EventsSpacePage/EventsSpace";
 import Academies from "./components/AcademiesPage/Academies";
 import Footer from "./components/Footer/Footer";
-import Coworking from "./components/HomePage/Coworking/Coworking";
+import Coworking from "./components/Homepage/Coworking/Coworking";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 
 import ScrollToTop from "./ScrollToTop";
