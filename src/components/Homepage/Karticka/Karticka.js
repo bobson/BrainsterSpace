@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  Card,
-  // CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  Button,
-} from "reactstrap";
+import { Card, CardBody, CardTitle, Button } from "reactstrap";
 
 import { Link } from "react-router-dom";
 

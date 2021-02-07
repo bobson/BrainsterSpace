@@ -6,6 +6,7 @@ import coworkingImg from "../assets/Sliki/Za_Nas/coworking.jpg";
 import prostorImg from "../assets/Sliki/Za_Nas/prostor za nastani.jpg";
 import partnerstvaImg from "../assets/Sliki/Za_Nas/partnerstva so tech komp.jpg";
 import inovaciiImg from "../assets/Sliki/Za_Nas/IMG_7397.jpg";
+import companii from "../assets/Sliki/IMG_7707.jpg";
 
 import codeworks from "../assets/Sliki/Nastani/IMG_7481.jpg";
 import marketing from "../assets/Sliki/Nastani/instruktori.jpg";
@@ -174,7 +175,7 @@ export const blockContext = {
       компаниите.
     </p>
   ),
-  kompanii_img: kompaniiImg,
+  kompanii_img: companii,
 
   coworking: (
     <p>
