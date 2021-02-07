@@ -18,3 +18,11 @@
   color: white;
   margin: auto;
 }
+
+.dots {
+  display: inline-block;
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -39,18 +39,15 @@ const EventsSpace = () => {
       <Prostorii />
       <SpaceKitchen />
       <Offers />
-      <div
-        className="row mt-5 pt-4 mb-5 flex-lg-row-reverse justify-content-between align-items-center"
-        id="event-host"
-      >
-        <div className="col-md col-lg-5 event-host-img">
-          <LazyImage src={eventHostImg} alt="host-img" />
+      <div className="row mt-5 pt-4 mb-5 flex-lg-row-reverse justify-content-between align-items-center">
+        <div className="col-md-6 col-lg-4 event-host-img">
+          <img src={eventHostImg} alt="host-img" />
         </div>
-        <div className="col-md-6 col-lg-4">
+        <div className="col-md-6 col-lg-4" id="event-host">
           <p className="block-title">Event Host</p>
           <p className="p-0">Ања Макеска</p>
           <p className="p-0">anja@brainster.co</p>
-          <p className="p-0">+389 (0)70 233 414</p>
+          <p className="p-0">+389 (0)70 233 414 </p>
         </div>
       </div>
     </>

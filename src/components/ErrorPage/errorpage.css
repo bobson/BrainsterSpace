@@ -1,0 +1,19 @@
+.error {
+  /* background-image: url("../../assets/Sliki/external-content.duckduckgo.com.jpg"); */
+  /* background-size: cover; */
+  width: 100%;
+  height: 80vh;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw; */
+}
+
+/* .error a {
+  color: white;
+} */

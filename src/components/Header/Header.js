@@ -7,9 +7,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import logo from "../../assets/brainster_space_logo.svg";
 import ModalLouncher from "../ModalLouncher/ModalLouncher";
 
-import { Link } from "react-router-dom";
-
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import "./header.css";
 

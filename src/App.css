@@ -139,6 +139,11 @@ img {
     border-radius: 5px;
     font-size: 1.7rem;
   }
+  .card-body .dots {
+    overflow: visible;
+    white-space: normal;
+    width: 100%;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -156,7 +161,7 @@ img {
     font-size: 30px;
   }
 
-  .smaller-kitchen-img img {
+  .smaller-kitchen-img {
     height: 200px;
   }
 
@@ -166,7 +171,7 @@ img {
     bottom: 0;
   }
 
-  .bigger-kitchen-img img {
+  .bigger-kitchen-img {
     height: 400px;
   }
 

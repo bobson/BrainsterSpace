@@ -93,7 +93,7 @@ const Karticka = ({ img, title, text, url, imgHeight }) => {
           <CardTitle className="font-weight-bold" tag="h4">
             {title}
           </CardTitle>
-          <CardText>{text}</CardText>
+          {text}
           <div className="card-link ml-auto mt-auto">{link}</div>
         </CardBody>
       </Card>
