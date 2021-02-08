@@ -24,9 +24,8 @@ const btnContent = [
 
 const Offers = () => {
   return (
-    <div className="row mt-5 p-3 align-items-start flex-column  flex-md-row">
+    <div className="row mt-5 p-3 align-items-start flex-column offers flex-md-row">
       <p className="text-left col-12 p-0 block-title">Нудиме</p>
-      {/* <div className="col-12 flex-wrap p-0 d-flex flex-row"> */}
       {btnContent.map((el) => (
         <button
           key={el.text}
@@ -38,7 +37,6 @@ const Offers = () => {
         </button>
       ))}
     </div>
-    // </div>
   );
 };
 
