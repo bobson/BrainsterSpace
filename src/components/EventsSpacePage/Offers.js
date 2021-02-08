@@ -24,18 +24,21 @@ const btnContent = [
 
 const Offers = () => {
   return (
-    <div className="row mt-5 p-3 align-items-start flex-column flex-md-row">
+    <div className="row mt-5 p-3 align-items-start flex-column  flex-md-row">
       <p className="text-left col-12 p-0 block-title">Нудиме</p>
+      {/* <div className="col-12 flex-wrap p-0 d-flex flex-row"> */}
       {btnContent.map((el) => (
         <button
           key={el.text}
-          className="btn-custom-2 pr-4 pl-4 rounded d-flex mb-3 mr-3"
+          className="btn-custom-2 pr-4 pl-4 rounded d-flex float-left mb-3 mr-3"
+          disabled
         >
           <span className="btn-icon mr-2">{el.icon}</span>
           <span className="btn-text">{el.text}</span>
         </button>
       ))}
     </div>
+    // </div>
   );
 };
 

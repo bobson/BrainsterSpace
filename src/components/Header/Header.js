@@ -44,7 +44,7 @@ const Header = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar className="text-center custom-color ">
             <NavItem>
-              <NavLink to="/calendar" className="nav-link ">
+              <NavLink to="/calendar" className="nav-link">
                 НАСТАНИ
               </NavLink>
             </NavItem>
@@ -68,6 +68,7 @@ const Header = () => {
                 href="https://partners.brainster.co/"
                 className="nav-link"
                 target="blank"
+                onClick={toggle}
               >
                 ПАРТНЕРСТВА
               </a>

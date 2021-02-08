@@ -1,5 +1,5 @@
 .btn-custom-2 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   background: black;
   color: white;
   border: none;
@@ -10,9 +10,11 @@
 }
 
 .btn-icon svg {
-  height: 1.6rem;
-  width: 1.6rem;
+  width: 30px;
+  height: 30px;
   color: #fcd232;
+  align-self: center;
+  margin-bottom: 4px;
 }
 
 .event-host-img img {

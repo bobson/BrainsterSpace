@@ -40,7 +40,7 @@ const EventsSpace = () => {
       <SpaceKitchen />
       <Offers />
       <div className="row mt-5 pt-4 mb-5 flex-lg-row-reverse justify-content-between align-items-center">
-        <div className="col-md-6 col-lg-4 event-host-img">
+        <div className="col-md-6 col-lg-5 event-host-img">
           <img src={eventHostImg} alt="host-img" />
         </div>
         <div className="col-md-6 col-lg-4" id="event-host">

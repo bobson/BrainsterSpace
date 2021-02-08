@@ -180,6 +180,9 @@ img {
     height: 80px;
     position: relative;
   }
+  .btn-custom-2 {
+    font-size: 1.4rem;
+  }
 }
 
 /* Extra large devices (large desktops, 1800px and up) */
