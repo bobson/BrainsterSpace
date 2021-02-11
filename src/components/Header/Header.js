@@ -13,10 +13,12 @@ import "./header.css";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [modal, setModal] = useState(false);
+  const [openModalJoin, setOpenModalJoin] = useState(false);
+  const [openModalPartner, setOpenModalPartner] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
-  const toggleModal = () => setModal(!modal);
+  const toggleModalJoin = () => setOpenModalJoin(!openModalJoin);
+  const toggleModalPartner = () => setOpenModalPartner(!openModalPartner);
 
   return (
     <Navbar color="white" expand="lg" className="p-0  p-lg-3">
@@ -26,12 +28,12 @@ const Header = () => {
         </Link>
         <div className="d-none d-md-block d-lg-none ml-auto">
           <ModalLouncher
-            toggleModal={toggleModal}
-            modal={modal}
+            toggleModal={toggleModalJoin}
+            modal={openModalJoin}
             email="Емаил (задолжително)"
             telnum="Телефонски број (задолжително)"
           >
-            <button className="btn-custom " onClick={() => toggleModal()}>
+            <button className="btn-custom " onClick={() => toggleModalJoin()}>
               <AiOutlinePlus />
               ПРИКЛУЧИ СE
             </button>
@@ -64,23 +66,34 @@ const Header = () => {
               </NavLink>
             </NavItem>
             <NavItem>
-              <a
-                href="https://partners.brainster.co/"
-                className="nav-link"
-                target="blank"
-                onClick={toggle}
+              <ModalLouncher
+                toggleModal={toggleModalPartner}
+                modal={openModalPartner}
+                telnum="Телефонски број (задолжително)"
+                company="Име на Компанија (нездолжително)"
+                text="Предлог за Соработа (незадолжително)"
               >
-                ПАРТНЕРСТВА
-              </a>
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                <a
+                  href="#"
+                  className="nav-link"
+                  onClick={() => toggleModalPartner()}
+                >
+                  ПАРТНЕРСТВА
+                </a>
+              </ModalLouncher>
             </NavItem>
             <div className="d-md-none d-lg-block ml-auto btn-responsive">
               <ModalLouncher
-                toggleModal={toggleModal}
-                modal={modal}
+                toggleModal={toggleModalJoin}
+                modal={openModalJoin}
                 email="Емаил (задолжително)"
                 telnum="Телефонски број (задолжително)"
               >
-                <button className="btn-custom" onClick={() => toggleModal()}>
+                <button
+                  className="btn-custom"
+                  onClick={() => toggleModalJoin()}
+                >
                   <AiOutlinePlus />
                   ПРИКЛУЧИ СE
                 </button>

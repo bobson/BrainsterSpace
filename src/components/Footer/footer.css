@@ -14,10 +14,6 @@ footer {
   display: inline-block;
 }
 
-.tooltip-btn:hover {
-  text-decoration: underline;
-}
-
 .tooltip-hidden {
   display: none;
 }
@@ -28,7 +24,7 @@ footer {
   font-style: italic;
   border-radius: 6px;
   padding: 5px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   position: absolute;
   z-index: 1;
   background-color: white;
@@ -46,4 +42,10 @@ footer {
   border-width: 7px;
   border-style: solid;
   border-color: transparent black transparent transparent;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

@@ -14,7 +14,8 @@
   padding-bottom: 3px;
 }
 
-.nav-link:after {
+.nav-link:after,
+.footer-links li:after {
   content: "";
   display: block;
   margin: auto;
@@ -33,7 +34,8 @@
   color: black;
 }
 
-.nav-link:hover:after {
+.nav-link:hover:after,
+.footer-links li:hover:after {
   width: 100%;
   background: #fcd232;
 }

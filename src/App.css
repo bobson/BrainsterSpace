@@ -52,15 +52,12 @@ a:hover {
 
 .btn-custom:hover {
   background-color: #e0a800;
-  transform: translateY(-2px);
   color: black;
-  transform: scale(1.05);
   z-index: 1;
 }
 
 .btn-custom:disabled:hover {
   background-color: black;
-  transform: translateY(0px);
   color: #ffc107;
 }
 
@@ -80,8 +77,12 @@ img {
   object-fit: cover;
 }
 
-.full-width {
-  width: 100vh;
+button:focus {
+  outline: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
 }
 
 /* Small devices (landscape phones, 544px and up) */
@@ -190,5 +191,9 @@ img {
   .title h1 {
     font-size: 60px;
     width: 50%;
+  }
+  .container,
+  .container-lg {
+    max-width: 1500px !important;
   }
 }
