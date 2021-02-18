@@ -19,12 +19,14 @@ footer {
 }
 
 .footer-popup-visible {
-  width: 150px;
+  width: 170px;
   color: black;
   font-style: italic;
   border-radius: 6px;
   padding: 5px;
   font-size: 1rem;
+  background-color: #fbb034;
+  background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
   position: absolute;
   z-index: 1;
   background-color: white;
