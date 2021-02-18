@@ -80,8 +80,8 @@ const Footer = () => {
             </div>
           </div>
           <div className="col-sm-4 order-1 order-md-3 col-md-4 col-lg-6 ml-md-auto d-flex">
-            <Link to="/" className="ml-md-auto pb-5">
-              <img src={logo} alt="logo" height="70%" />
+            <Link to="/" className="ml-md-auto pb-4">
+              <img src={logo} alt="logo" width="120%" />
             </Link>
           </div>
         </div>
