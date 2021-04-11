@@ -72,8 +72,8 @@ const Karticka = ({ img, title, text, url, imgHeight }) => {
   }
 
   return (
-    <div className="col-sm-12 col-md-6 col-lg-4 p-2 d-flex aligin-items-stretch ">
-      <Slide bottom duration={1000} distance="30px">
+    <Slide bottom duration={1000} distance="30px">
+      <div className="col-sm-12 col-md-6 col-lg-4 p-2 d-flex aligin-items-stretch ">
         <Card>
           <div className="inner">
             <LazyImage
@@ -92,8 +92,8 @@ const Karticka = ({ img, title, text, url, imgHeight }) => {
             <div className="card-link ml-auto mt-auto">{link}</div>
           </CardBody>
         </Card>
-      </Slide>
-    </div>
+      </div>
+    </Slide>
   );
 };
 

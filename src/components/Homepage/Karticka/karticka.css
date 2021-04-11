@@ -1,4 +1,5 @@
-.inner img {
+.inner img,
+svg {
   transition: all 1s;
 }
 
@@ -11,8 +12,7 @@
 }
 
 .card:hover svg {
-  transform: scale(1.2);
-  rotate: 720deg;
+  transform: scale(1.2) rotate(720deg);
   color: #ffc107;
 }
 

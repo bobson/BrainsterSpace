@@ -13,8 +13,8 @@ import { academy_cards } from "../../lib/cards";
 
 const AcademyCard = ({ img, title, color, link }) => {
   return (
-    <div className="col-md-6 col-lg-4 p-0 p-2">
-      <Fade top duration={1000} distance="30px">
+    <Fade top duration={1000} distance="30px">
+      <div className="col-md-6 col-lg-4 p-0 p-2">
         <div
           className="akademy-card d-flex flex-column justify-content-between inner rounded"
           style={{ backgroundColor: color, backgroundImage: `url(${img})` }}
@@ -46,8 +46,8 @@ const AcademyCard = ({ img, title, color, link }) => {
             </p>
           </div>
         </div>
-      </Fade>
-    </div>
+      </div>
+    </Fade>
   );
 };
 
