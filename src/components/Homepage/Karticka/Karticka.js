@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Card, CardBody, CardTitle, Button } from "reactstrap";
+import Slide from "react-reveal/Fade";
 
 import { Link } from "react-router-dom";
 
@@ -72,24 +73,26 @@ const Karticka = ({ img, title, text, url, imgHeight }) => {
 
   return (
     <div className="col-sm-12 col-md-6 col-lg-4 p-2 d-flex aligin-items-stretch ">
-      <Card>
-        <div className="inner">
-          <LazyImage
-            top
-            width="100%"
-            height={imgHeight}
-            src={img}
-            alt="Card image cap"
-          />
-        </div>
-        <CardBody className="d-flex flex-column ">
-          <CardTitle className="font-weight-bold" tag="h4">
-            {title}
-          </CardTitle>
-          {text}
-          <div className="card-link ml-auto mt-auto">{link}</div>
-        </CardBody>
-      </Card>
+      <Slide bottom duration={1000} distance="30px">
+        <Card>
+          <div className="inner">
+            <LazyImage
+              top
+              width="100%"
+              height={imgHeight}
+              src={img}
+              alt="Card image cap"
+            />
+          </div>
+          <CardBody className="d-flex flex-column ">
+            <CardTitle className="font-weight-bold" tag="h4">
+              {title}
+            </CardTitle>
+            {text}
+            <div className="card-link ml-auto mt-auto">{link}</div>
+          </CardBody>
+        </Card>
+      </Slide>
     </div>
   );
 };

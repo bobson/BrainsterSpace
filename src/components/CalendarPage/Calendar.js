@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiArrowLeftCircle } from "react-icons/fi";
 import { FiArrowRightCircle } from "react-icons/fi";
+import Fade from "react-reveal";
 
 import "./calendar.css";
 
@@ -128,30 +129,38 @@ const Calendar = () => {
   return (
     <>
       <div className="row mt-5 mb-5  justyfy-content-between align-items-center">
-        <div className="col-sm-12 col-md-6 mb-0 mb-md-5">
-          <p className="block-title">Календар</p>
-        </div>
-        <div className="col-sm-12 col-md-6 mb-5 month">
-          <p className="float-md-right">
-            <FiArrowLeftCircle role="button" onClick={handlePrevMonth} />{" "}
-            {months[month]} {year}{" "}
-            <FiArrowRightCircle role="button" onClick={handleNextMonth} />
-          </p>
-        </div>
+        <Fade left duration={1000} destination="30px">
+          <div className="col-sm-12 col-md-6 mb-0 mb-md-5">
+            <p className="block-title">Календар</p>
+          </div>
+        </Fade>
+        <Fade right duration={1000} destination="30px">
+          <div className="col-sm-12 col-md-6 mb-5 month">
+            <p className="float-md-right">
+              <FiArrowLeftCircle role="button" onClick={handlePrevMonth} />{" "}
+              {months[month]} {year}{" "}
+              <FiArrowRightCircle role="button" onClick={handleNextMonth} />
+            </p>
+          </div>
+        </Fade>
         <div className="col-12 d-none d-md-flex weekdays ">
-          <div>НЕД</div>
-          <div>ПОН</div>
-          <div>ВТО</div>
-          <div>СРЕ</div>
-          <div>ЧЕТ</div>
-          <div>ПЕТ</div>
-          <div>САБ</div>
+          <Fade top duration={1000} destination="30px">
+            <div>НЕД</div>
+            <div>ПОН</div>
+            <div>ВТО</div>
+            <div>СРЕ</div>
+            <div>ЧЕТ</div>
+            <div>ПЕТ</div>
+            <div>САБ</div>
+          </Fade>
         </div>
-        <div className="col-12 days d-flex flex-wrap">
-          {prevMonthDays}
-          {daysOfTheMonth}
-          {nextMontDays}
-        </div>
+        <Fade bottom duration={1000} destination="30px">
+          <div className="col-12 days d-flex flex-wrap">
+            {prevMonthDays}
+            {daysOfTheMonth}
+            {nextMontDays}
+          </div>
+        </Fade>
       </div>
       <div className="row mt-5 pt-4 pb-4 d-lg-none nastani flex-row">
         <div className="col-12 p-0 ml-4 ml-md-0">

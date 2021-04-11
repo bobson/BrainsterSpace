@@ -13,6 +13,7 @@ import Coworking from "./components/Homepage/Coworking/Coworking";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 
 import ScrollToTop from "./ScrollToTop";
+import BackToTop from "./components/BackToTop/BackToTop";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/events_space" component={EventsSpace} />
           <Route component={ErrorPage} />
         </Switch>
+        <BackToTop />
       </div>
       <Footer />
     </BrowserRouter>

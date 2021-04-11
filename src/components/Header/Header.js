@@ -23,7 +23,7 @@ const Header = () => {
   const toggleModalPartner = () => setOpenModalPartner(!openModalPartner);
 
   return (
-    <Navbar color="white" expand="lg" className="p-0  p-lg-3">
+    <Navbar color="white" expand="lg" id="navbar" className="p-0  p-lg-3">
       <div className="container-lg">
         <Link to="/" className="navbar-brand p-4 mr-4 p-lg-0">
           <img src={logo} alt="logo" />
